@@ -7,7 +7,7 @@
     android:layout_height="match_parent">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/fragmentInicioCaratula"
         android:layout_width="112dp"
         android:layout_height="200dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -15,7 +15,7 @@
         app:srcCompat="@drawable/ic_launcher_background" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/fragmentInicioTitulo"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:autoText="false"
@@ -23,8 +23,8 @@
         android:text="The shadow of the tomb raider"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textSize="35dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintBottom_toBottomOf="@+id/fragmentInicioCaratula"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="@+id/imageView" />
+        app:layout_constraintStart_toEndOf="@+id/fragmentInicioCaratula"
+        app:layout_constraintTop_toTopOf="@+id/fragmentInicioCaratula" />
 </androidx.constraintlayout.widget.ConstraintLayout>
