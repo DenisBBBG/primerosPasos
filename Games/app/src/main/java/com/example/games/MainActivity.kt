@@ -2,7 +2,12 @@ package com.example.games
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.games.fragments.FragmentInicio
 import com.example.games.interfaces.JuegoAPI
 import kotlinx.android.synthetic.main.fragment_inicio.*
@@ -19,7 +24,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val request = ServiceBuilder.buildService(JuegoAPI::class.java)
-        val call = request.getGames("*")
+        val call = request.getGames(getString(R.string.api_key))
 
         call.enqueue(object : Callback<Juego> {
             override fun onResponse(call: Call<Juego>, response: Response<Juego>) {
@@ -38,6 +43,7 @@ class MainActivity : AppCompatActivity() {
         })
 
         }
+
 
 
 

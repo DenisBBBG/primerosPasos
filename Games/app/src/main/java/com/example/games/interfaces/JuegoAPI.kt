@@ -7,7 +7,7 @@ import retrofit2.http.Query
 
 interface JuegoAPI {
 
-    @GET("/games")
-    fun getGames(@Query("fields") fields: String): Call<Juego>
+    @GET("/games/?fields=*")
+    fun getGames(@Query("api_key") key: String): Call<Juego>
 
 }
