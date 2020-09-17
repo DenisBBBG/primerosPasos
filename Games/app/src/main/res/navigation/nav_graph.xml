@@ -3,9 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/fragmentInicio5">
+    app:startDestination="@id/fragmentInicio">
     <fragment
-        android:id="@+id/fragmentInicio5"
+        android:id="@+id/fragmentInicio"
         android:name="com.example.games.fragments.FragmentInicio"
         android:label="fragment_inicio"
         tools:layout="@layout/fragment_inicio" />

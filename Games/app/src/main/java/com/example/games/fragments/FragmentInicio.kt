@@ -5,16 +5,17 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
-import androidx.recyclerview.widget.RecyclerView
-import com.example.games.R
-import com.example.games.Juego
-import com.example.games.Result
-
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.games.*
+import kotlinx.android.synthetic.main.fragment_inicio.*
+import com.example.games.interfaces.JuegoAPI
+import kotlinx.android.synthetic.main.fragment_inicio.*
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
+private const val titulo = ""
 
 /**
  * A simple [Fragment] subclass.
@@ -23,23 +24,24 @@ private const val ARG_PARAM2 = "param2"
  */
 class FragmentInicio : Fragment() {
     // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+    private var titulo: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
+            titulo = it.getString(titulo)
         }
-    }
+
+
+          }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.item, container, false)
+        return inflater.inflate(R.layout.fragment_inicio, container, false)
+
     }
 
     companion object {
@@ -56,34 +58,35 @@ class FragmentInicio : Fragment() {
         fun newInstance(param1: String, param2: String) =
             FragmentInicio().apply {
                 arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
+
                 }
             }
     }
 
-    class GamesAdapter(val games: List<com.example.games.Result>): RecyclerView.Adapter<GamesViewHolder>() {
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
-        override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): GamesViewHolder {
-            val view = LayoutInflater.from(parent.context).inflate(R.layout.item, parent, false)
-            return GamesViewHolder(view)
-        }
-        override fun getItemCount(): Int {
-            return games.size
-        }
-        override fun onBindViewHolder(holder: GamesViewHolder, position: Int) {
-            return holder.bind(games[position])
-        }
+        val request = ServiceBuilder.buildService(JuegoAPI::class.java)
+        val call = request.getGames(getString(R.string.api_key))
+
+        call.enqueue(object : Callback<Juego> {
+            override fun onResponse(call: Call<Juego>, response: Response<Juego>) {
+                if (response.isSuccessful) {
+
+                    recyclerView.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
+                    recyclerView.adapter = GamesAdapter(response.body()!!.results)
+                }
+
+
+            }
+
+            override fun onFailure(call: Call<Juego>, t: Throwable) {
+                TODO("Not yet implemented")
+            }
+        })
+
 
     }
 
-    class GamesViewHolder(itemView : View): RecyclerView.ViewHolder(itemView){
-        private val title: TextView = itemView.findViewById(R.id.fragmentInicioTitulo)
-
-        fun bind(game: Result) {
-            title.text = "Title: "+game.name
-
-        }
-    }
 
 }
