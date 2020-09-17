@@ -1,13 +1,13 @@
 package com.example.games.interfaces
 
-import com.example.games.Juego
+import com.example.games.JuegosItem
 import retrofit2.Call
 import retrofit2.http.GET
-import retrofit2.http.Query
+import retrofit2.http.Headers
 
 interface JuegoAPI {
-
-    @GET("/games/?fields=*")
-    fun getGames(@Query("api_key") key: String): Call<Juego>
+    @Headers("user-key: f5a3a47ff1d75c223eddb66ffa1e31e6")
+    @GET("/games/?fields=name")
+    fun getGames(): Call<List<JuegosItem>>
 
 }

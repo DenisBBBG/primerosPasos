@@ -1,12 +1,11 @@
 package com.example.games
 
+class Juego : ArrayList<JuegosItem>()
 
-data class Juego (
-    val results: List<Result>
-
-)
-
-data class Result(
+data class JuegosItem (
     val name: String
+
 )
+
+
 
