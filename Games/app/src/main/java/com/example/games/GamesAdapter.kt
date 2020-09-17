@@ -3,8 +3,10 @@ package com.example.games
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 
 
 class GamesAdapter(val games: List<com.example.games.JuegosItem>): RecyclerView.Adapter<GamesViewHolder>() {
@@ -24,9 +26,10 @@ class GamesAdapter(val games: List<com.example.games.JuegosItem>): RecyclerView.
 
 class GamesViewHolder(itemView : View): RecyclerView.ViewHolder(itemView){
     private val title: TextView = itemView.findViewById(R.id.fragmentInicioTitulo)
-
+    private var imagen: ImageView = itemView.findViewById(R.id.fragmentInicioCaratula)
     fun bind(game: JuegosItem) {
-        title.text = "Title: "+game.name
+        title.text = game.name
+        Glide.with(itemView.context).load("https://api-v3.igdb.com/t/p/w500/games/39903").into(imagen)
 
     }
 }

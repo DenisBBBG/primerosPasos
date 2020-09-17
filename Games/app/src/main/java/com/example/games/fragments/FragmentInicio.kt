@@ -20,9 +20,6 @@ class FragmentInicio : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        Toast.makeText(activity,"onCreate",Toast.LENGTH_SHORT).show()
-
-
 
           }
 
@@ -35,6 +32,9 @@ class FragmentInicio : Fragment() {
                 response: Response<List<JuegosItem>>
             ) {
                 Toast.makeText(activity,"EXITO", Toast.LENGTH_LONG).show()
+                recyclerView.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
+                recyclerView.adapter = GamesAdapter(response.body()!!)
+
             }
 
             override fun onFailure(call: Call<List<JuegosItem>>, t: Throwable) {
@@ -57,8 +57,7 @@ class FragmentInicio : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        recyclerView.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
-        recyclerView.adapter = GamesAdapter(listOf(JuegosItem("GTA"),JuegosItem("GTA"),JuegosItem("GTA"),JuegosItem("GTA")))
+
         callServiceGetGames()
 
     }
