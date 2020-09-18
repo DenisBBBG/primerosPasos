@@ -31,7 +31,7 @@ class GamesViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
     fun bind(game: JuegosItem, cover: CoverItem?) {
 
         title.text = game.name
-        Glide.with(itemView.context).load(cover?.url).into(imagen)
+        Glide.with(itemView.context).load("https:"+ cover?.url).into(imagen)
     }
 }
 

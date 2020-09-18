@@ -13,7 +13,7 @@ interface JuegoAPI {
     fun getGames(): Call<List<JuegosItem>>
 
     @Headers("user-key: f5a3a47ff1d75c223eddb66ffa1e31e6")
-    @GET("/covers/{id}")
-    fun getURLCover(@Path("id") id: Int?): Call<CoverItem>
+    @GET("/covers/{id}/?fields=url")
+    fun getURLCover(@Path("id") id: Int?): Call<List<CoverItem>>
 
 }
