@@ -26,14 +26,20 @@ class FragmentInicio : Fragment() {
     private fun callServiceGetGames(){
         val userService: JuegoAPI = ServiceBuilder.getServiceBuilder().create(JuegoAPI::class.java)
         val result: Call<List<JuegosItem>> = userService.getGames()
+
         result.enqueue(object : Callback<List<JuegosItem>> {
             override fun onResponse(
                 call: Call<List<JuegosItem>>,
                 response: Response<List<JuegosItem>>
             ) {
+                var cover1: CoverItem? = CoverItem("https://images.igdb.com/igdb/image/upload/t_thumb/myewkwhbaxeg5fugaaj9.jpg")
+                cover1 = callServiceGetCovers(39903)
+
+
+
                 Toast.makeText(activity,"EXITO", Toast.LENGTH_LONG).show()
                 recyclerView.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
-                recyclerView.adapter = GamesAdapter(response.body()!!)
+                recyclerView.adapter = GamesAdapter(response.body()!!, listOf(cover1,cover1))
 
             }
 
@@ -42,6 +48,16 @@ class FragmentInicio : Fragment() {
             }
         })
     }
+
+    private fun callServiceGetCovers(id: Int): CoverItem? {
+        val userService: JuegoAPI = ServiceBuilder.getServiceBuilder().create(JuegoAPI::class.java)
+        val result: Call<CoverItem> = userService.getURLCover(id)
+
+
+        return result.execute().body()
+    }
+
+
 
 
     override fun onCreateView(

@@ -7,5 +7,6 @@ data class JuegosItem (
     val cover: Int
 )
 
-
-
+data class CoverItem (
+    val url: String
+)
