@@ -20,7 +20,7 @@ class GamesAdapter(val games: List<JuegosItem>, private val covers: List<CoverIt
         return games.size
     }
     override fun onBindViewHolder(holder: GamesViewHolder, position: Int) {
-        return holder.bind(games[position], covers[0])
+        return holder.bind(games[position], covers[position])
     }
 
 }

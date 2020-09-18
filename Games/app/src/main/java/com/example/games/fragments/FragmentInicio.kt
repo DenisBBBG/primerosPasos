@@ -6,6 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.annotation.NonNull
+import androidx.annotation.Nullable
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.games.*
@@ -43,10 +45,24 @@ class FragmentInicio : Fragment() {
         StrictMode.setThreadPolicy(policy)
         val userService: JuegoAPI = ServiceBuilder.getServiceBuilder().create(JuegoAPI::class.java)
         val result: Call<List<JuegosItem>> = userService.getGames()
-        val result2: Call<List<CoverItem>> = userService.getURLCover(39903)
+
 
         val listaJuegos: List<JuegosItem> = result.execute().body()!!
-        val listaCovers: List<CoverItem> = (result2.execute().body()!!)
+        val listaCovers = mutableListOf<CoverItem>()
+
+        for (juego in listaJuegos){
+
+            if (juego.cover != null){
+
+                val result2: Call<List<CoverItem>> = userService.getURLCover(juego.cover)
+                listaCovers.add(result2.execute().body()!![0])
+            }
+            else{
+                listaCovers.add(CoverItem("images.igdb.com/igdb/image/upload/t_thumb/myewkwhbaxeg5fugaaj9.jpg"))
+            }
+
+
+        }
 
 
         recyclerView.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
