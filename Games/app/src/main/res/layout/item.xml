@@ -8,21 +8,23 @@
 
     <ImageView
         android:id="@+id/fragmentInicioCaratula"
-        android:layout_width="112dp"
-        android:layout_height="200dp"
+        android:layout_width="121dp"
+        android:layout_height="124dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_launcher_background" />
+        app:srcCompat="@mipmap/sin_imagen" />
 
     <TextView
         android:id="@+id/fragmentInicioTitulo"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="279dp"
+        android:layout_height="147dp"
         android:autoText="false"
         android:gravity="center"
         android:text="The shadow of the tomb raider"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textSize="35dp"
+        android:textSize="25dp"
         app:layout_constraintBottom_toBottomOf="@+id/fragmentInicioCaratula"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/fragmentInicioCaratula"

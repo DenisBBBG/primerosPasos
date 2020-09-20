@@ -56,9 +56,8 @@ class FragmentInicio : Fragment() {
 
                 val result2: Call<List<CoverItem>> = userService.getURLCover(juego.cover)
                 listaCovers.add(result2.execute().body()!![0])
-            }
-            else{
-                listaCovers.add(CoverItem("images.igdb.com/igdb/image/upload/t_thumb/myewkwhbaxeg5fugaaj9.jpg"))
+            }else{
+                listaCovers.add(CoverItem("sinURL"))
             }
 
 
