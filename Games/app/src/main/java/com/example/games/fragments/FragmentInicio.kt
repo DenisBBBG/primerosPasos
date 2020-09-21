@@ -26,6 +26,8 @@ import retrofit2.Response
 
 class FragmentInicio : Fragment() {
 
+    
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -71,8 +73,8 @@ class FragmentInicio : Fragment() {
 
         recyclerView.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
 
-        recyclerView.adapter = GamesAdapter(listaJuegos, listaCovers){ JuegosItem  ->
-            val bundle = bundleOf("titulo" to JuegosItem.name,"descripcion" to JuegosItem.summary)
+        recyclerView.adapter = GamesAdapter(listaJuegos, listaCovers){ JuegosItem,CoversItem  ->
+            val bundle = bundleOf("titulo" to JuegosItem.name,"descripcion" to JuegosItem.summary,"url" to CoversItem.url)
             Navigation.findNavController(view).navigate(R.id.datosJuego, bundle)
 
         }

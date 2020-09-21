@@ -10,7 +10,7 @@ import com.bumptech.glide.Glide
 
 
 
-class GamesAdapter(val games: List<JuegosItem>, private val covers: List<CoverItem?>, private val listener: (JuegosItem) -> Unit): RecyclerView.Adapter<GamesViewHolder>(){
+class GamesAdapter(val games: List<JuegosItem>, private val covers: List<CoverItem>, private val listener: (JuegosItem,CoverItem) -> Unit): RecyclerView.Adapter<GamesViewHolder>(){
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): GamesViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item, parent, false)
@@ -24,7 +24,7 @@ class GamesAdapter(val games: List<JuegosItem>, private val covers: List<CoverIt
 
     override fun onBindViewHolder(holder: GamesViewHolder, position: Int) {
 
-        holder.itemView.setOnClickListener{listener(games[position])
+        holder.itemView.setOnClickListener{listener(games[position],covers[position])
 
         }
 
