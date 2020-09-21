@@ -26,7 +26,10 @@ import retrofit2.Response
 
 class FragmentInicio : Fragment() {
 
-    
+
+    var listaJuegos = mutableListOf<JuegosItem>()
+    var listaCovers = mutableListOf<CoverItem>()
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -53,22 +56,23 @@ class FragmentInicio : Fragment() {
         val userService: JuegoAPI = ServiceBuilder.getServiceBuilder().create(JuegoAPI::class.java)
         val result: Call<List<JuegosItem>> = userService.getGames()
 
+        if (listaJuegos.isEmpty()){
+            listaJuegos = (result.execute().body() as MutableList<JuegosItem>?)!!
 
-        val listaJuegos: List<JuegosItem> = result.execute().body()!!
-        val listaCovers = mutableListOf<CoverItem>()
+            for (juego in listaJuegos){
 
-        for (juego in listaJuegos){
+                if (juego.cover != null){
 
-            if (juego.cover != null){
+                    val result2: Call<List<CoverItem>> = userService.getURLCover(juego.cover)
+                    listaCovers.add(result2.execute().body()!![0])
+                }else{
+                    listaCovers.add(CoverItem("sinURL"))
+                }
 
-                val result2: Call<List<CoverItem>> = userService.getURLCover(juego.cover)
-                listaCovers.add(result2.execute().body()!![0])
-            }else{
-                listaCovers.add(CoverItem("sinURL"))
+
             }
-
-
         }
+
 
 
         recyclerView.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
