@@ -10,7 +10,7 @@ import com.bumptech.glide.Glide
 
 
 
-class GamesAdapter(val games: List<JuegosItem>, private val covers: List<CoverItem?>): RecyclerView.Adapter<GamesViewHolder>() {
+class GamesAdapter(val games: List<JuegosItem>, private val covers: List<CoverItem?>, private val listener: (JuegosItem) -> Unit): RecyclerView.Adapter<GamesViewHolder>(){
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): GamesViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item, parent, false)
@@ -19,14 +19,24 @@ class GamesAdapter(val games: List<JuegosItem>, private val covers: List<CoverIt
     override fun getItemCount(): Int {
         return games.size
     }
+
+
+
     override fun onBindViewHolder(holder: GamesViewHolder, position: Int) {
+
+        holder.itemView.setOnClickListener{listener(games[position])
+
+        }
+
         return holder.bind(games[position], covers[position])
+
     }
+
 
 }
 
 class GamesViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
-    private val title: TextView = itemView.findViewById(R.id.fragmentInicioTitulo)
+    private val title: TextView = itemView.findViewById(R.id.fragmentoDatosTitulo)
     private var imagen: ImageView = itemView.findViewById(R.id.fragmentInicioCaratula)
     fun bind(game: JuegosItem, cover: CoverItem?) {
 
@@ -39,6 +49,9 @@ class GamesViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
         }
 
     }
+
+
+
 }
 
 

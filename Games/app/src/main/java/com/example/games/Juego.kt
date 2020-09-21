@@ -4,7 +4,8 @@ class Juego : ArrayList<JuegosItem>()
 
 data class JuegosItem (
     val name: String,
-    val cover: Int?
+    val cover: Int?,
+    val summary: String
 )
 
 data class CoverItem (

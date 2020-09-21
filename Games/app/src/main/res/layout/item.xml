@@ -17,7 +17,7 @@
         app:srcCompat="@mipmap/sin_imagen" />
 
     <TextView
-        android:id="@+id/fragmentInicioTitulo"
+        android:id="@+id/fragmentoDatosTitulo"
         android:layout_width="279dp"
         android:layout_height="147dp"
         android:autoText="false"

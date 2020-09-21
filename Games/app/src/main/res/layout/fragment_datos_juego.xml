@@ -1,14 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragmentDatos"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".fragments.DatosJuego">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/fragmentoDatosTitulo"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:autoText="false"
+            android:gravity="center"
+            android:text="The shadow of the tomb raider"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="25dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.454"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fragmentoDatosCaratula" />
+
+        <ImageView
+            android:id="@+id/fragmentoDatosCaratula"
+            android:layout_width="400dp"
+            android:layout_height="222dp"
+            android:src="@drawable/ic_launcher_background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/fragmentoDatosDescripcion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:textAlignment="center"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fragmentoDatosTitulo" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>

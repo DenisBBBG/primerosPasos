@@ -8,5 +8,14 @@
         android:id="@+id/fragmentInicio"
         android:name="com.example.games.fragments.FragmentInicio"
         android:label="fragment_inicio"
-        tools:layout="@layout/fragment_inicio" />
+        tools:layout="@layout/fragment_inicio" >
+        <action
+            android:id="@+id/action_fragmentInicio_to_datosJuego2"
+            app:destination="@id/datosJuego" />
+    </fragment>
+    <fragment
+        android:id="@+id/datosJuego"
+        android:name="com.example.games.fragments.DatosJuego"
+        android:label="fragment_datos_juego"
+        tools:layout="@layout/fragment_datos_juego" />
 </navigation>

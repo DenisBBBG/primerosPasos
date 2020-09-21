@@ -8,10 +8,16 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.annotation.NonNull
 import androidx.annotation.Nullable
+import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.FragmentTransaction
+import androidx.navigation.Navigation
+import androidx.navigation.fragment.NavHostFragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.games.*
 import com.example.games.interfaces.JuegoAPI
+import kotlinx.android.synthetic.main.fragment_datos_juego.*
 import kotlinx.android.synthetic.main.fragment_inicio.*
 import retrofit2.Call
 import retrofit2.Callback
@@ -32,11 +38,10 @@ class FragmentInicio : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        Toast.makeText(activity, "onCreateView", Toast.LENGTH_LONG).show()
         return inflater.inflate(R.layout.fragment_inicio, container, false)
 
     }
+
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -65,7 +70,12 @@ class FragmentInicio : Fragment() {
 
 
         recyclerView.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
-        recyclerView.adapter = GamesAdapter(listaJuegos, listaCovers)
+
+        recyclerView.adapter = GamesAdapter(listaJuegos, listaCovers){ JuegosItem  ->
+            val bundle = bundleOf("titulo" to JuegosItem.name,"descripcion" to JuegosItem.summary)
+            Navigation.findNavController(view).navigate(R.id.datosJuego, bundle)
+
+        }
     }
 
 
