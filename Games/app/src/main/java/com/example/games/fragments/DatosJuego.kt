@@ -31,7 +31,14 @@ class DatosJuego : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         fragmentoDatosTitulo.text = requireArguments().getString("titulo")
-        fragmentoDatosDescripcion.text = requireArguments().getString("descripcion")
+
+        if(!requireArguments().getString("descripcion").isNullOrEmpty()){
+            fragmentoDatosDescripcion.text = requireArguments().getString("descripcion")
+        }else{
+            fragmentoDatosDescripcion.text = "Sin descripción."
+        }
+
+
         val url = requireArguments().getString("url")
         if(!url.equals("sinURL")){
             Glide.with(this).load("https:$url").into(fragmentoDatosCaratula)

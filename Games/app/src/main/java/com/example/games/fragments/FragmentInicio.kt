@@ -54,9 +54,10 @@ class FragmentInicio : Fragment() {
 
         StrictMode.setThreadPolicy(policy)
         val userService: JuegoAPI = ServiceBuilder.getServiceBuilder().create(JuegoAPI::class.java)
-        val result: Call<List<JuegosItem>> = userService.getGames()
+
 
         if (listaJuegos.isEmpty()){
+            val result: Call<List<JuegosItem>> = userService.getGames()
             listaJuegos = (result.execute().body() as MutableList<JuegosItem>?)!!
 
             for (juego in listaJuegos){

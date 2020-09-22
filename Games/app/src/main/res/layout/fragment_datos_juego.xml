@@ -7,70 +7,86 @@
     android:layout_height="match_parent"
     tools:context=".fragments.DatosJuego">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="#673AB7">
 
-        <TextView
-            android:id="@+id/fragmentoDatosTitulo"
-            android:layout_width="400dp"
-            android:layout_height="wrap_content"
-            android:autoText="false"
-            android:gravity="center"
-            android:text="The shadow of the tomb raider"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            android:textSize="25dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.454"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/fragmentoDatosCaratula" />
-
-        <ImageView
-            android:id="@+id/fragmentoDatosCaratula"
-            android:layout_width="400dp"
-            android:layout_height="222dp"
-            android:src="@drawable/ic_launcher_background"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/fragmentoDatosDescripcion"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView"
-            android:textAlignment="center"
-            android:textSize="20dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/fragmentoDatosTitulo" />
+            android:background="#673AB7"
+            android:nestedScrollingEnabled="true">
 
-        <TextView
-            android:id="@+id/fragmentoDatosUrl"
-            android:autoLink="all"
-            android:clickable="true"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="TextView"
-            android:textAlignment="center"
-            android:textSize="20dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/fragmentoDatosDescripcion" />
+            <TextView
+                android:id="@+id/fragmentoDatosTitulo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:autoText="false"
+                android:background="#33ACFF"
+                android:gravity="center"
+                android:text="The shadow of the tomb raider"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textSize="25dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.454"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fragmentoDatosCaratula" />
 
-        <TextView
-            android:id="@+id/fragmentoDatosChecksum"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="TextView"
-            android:textAlignment="center"
-            android:textSize="20dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/fragmentoDatosUrl" />
+            <ImageView
+                android:id="@+id/fragmentoDatosCaratula"
+                android:layout_width="0dp"
+                android:layout_height="222dp"
+                android:background="#33ACFF"
+                android:src="@drawable/ic_launcher_background"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            <TextView
+                android:id="@+id/fragmentoDatosDescripcion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="#33ACFF"
+                android:text="TextView"
+                android:textAlignment="center"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fragmentoDatosTitulo" />
+
+            <TextView
+                android:id="@+id/fragmentoDatosUrl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:autoLink="all"
+                android:background="#33ACFF"
+                android:clickable="true"
+                android:text="TextView"
+                android:textAlignment="center"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fragmentoDatosDescripcion" />
+
+            <TextView
+                android:id="@+id/fragmentoDatosChecksum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="#33ACFF"
+                android:text="TextView"
+                android:textAlignment="center"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fragmentoDatosUrl" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 
 </FrameLayout>
