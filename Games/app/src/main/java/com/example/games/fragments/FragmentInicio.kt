@@ -23,7 +23,10 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-
+/*
+Fragment que se carga al iniciar la aplicacion. En este fragment estoy
+cargando dos listas, una con objetos para cada imagen y otra para cada juego.
+ */
 class FragmentInicio : Fragment() {
 
 
@@ -50,18 +53,21 @@ class FragmentInicio : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        //Modifico politicas de android para poder cargar los datos
         val policy = StrictMode.ThreadPolicy.Builder().permitAll().build()
-
         StrictMode.setThreadPolicy(policy)
+
         val userService: JuegoAPI = ServiceBuilder.getServiceBuilder().create(JuegoAPI::class.java)
 
-
+        //Si la lista de juegos esta vacia se realizan las consultas necesarias para crear la.
         if (listaJuegos.isEmpty()){
             val result: Call<List<JuegosItem>> = userService.getGames()
             listaJuegos = (result.execute().body() as MutableList<JuegosItem>?)!!
 
+            //Por cada juego, se busca su caratula con el id y se añade a una lista.
             for (juego in listaJuegos){
 
+                //Si no tiene caratula se le pone una imagen por defecto
                 if (juego.cover != null){
 
                     val result2: Call<List<CoverItem>> = userService.getURLCover(juego.cover)

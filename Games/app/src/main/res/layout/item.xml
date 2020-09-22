@@ -11,8 +11,10 @@
         android:layout_width="132dp"
         android:layout_height="146dp"
         android:layout_marginTop="3dp"
+        android:adjustViewBounds="true"
         android:background="@drawable/caratula_background"
         android:cropToPadding="true"
+        android:foregroundGravity="center"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@mipmap/sin_imagen" />

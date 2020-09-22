@@ -5,7 +5,9 @@ import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-
+/*
+Clase con la que se realiza la conexion con la API mediante retrofit
+ */
 class ServiceBuilder {
     companion object{
         fun getServiceBuilder(): Retrofit {
