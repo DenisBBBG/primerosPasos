@@ -78,7 +78,7 @@ class FragmentInicio : Fragment() {
         recyclerView.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
 
         recyclerView.adapter = GamesAdapter(listaJuegos, listaCovers){ JuegosItem,CoversItem  ->
-            val bundle = bundleOf("titulo" to JuegosItem.name,"descripcion" to JuegosItem.summary,"url" to CoversItem.url)
+            val bundle = bundleOf("titulo" to JuegosItem.name,"descripcion" to JuegosItem.summary,"url" to CoversItem.url,"urlJuego" to JuegosItem.url,"checksum" to JuegosItem.checksum)
             Navigation.findNavController(view).navigate(R.id.datosJuego, bundle)
 
         }

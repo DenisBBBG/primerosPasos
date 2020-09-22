@@ -38,6 +38,8 @@ class DatosJuego : Fragment() {
         }else{
             Glide.with(this).load(R.mipmap.sin_imagen).into(fragmentoDatosCaratula)
         }
+        fragmentoDatosUrl.text = "Página web: "+ requireArguments().getString("urlJuego")
+        fragmentoDatosChecksum.text = "Checksum: "+requireArguments().getString("checksum")
     }
 
 
