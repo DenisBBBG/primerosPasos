@@ -11,7 +11,6 @@ import com.bumptech.glide.Glide
 
 
 class GamesAdapter(val games: List<JuegosItem>, private val listener: (JuegosItem) -> Unit): RecyclerView.Adapter<GamesViewHolder>(){
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): GamesViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item, parent, false)
         return GamesViewHolder(view)
@@ -20,19 +19,11 @@ class GamesAdapter(val games: List<JuegosItem>, private val listener: (JuegosIte
         return games.size
     }
 
-
-
     override fun onBindViewHolder(holder: GamesViewHolder, position: Int) {
-
         holder.itemView.setOnClickListener{listener(games[position])
-
         }
-
         return holder.bind(games[position])
-
     }
-
-
 }
 
 class GamesViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
@@ -47,11 +38,7 @@ class GamesViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
         }else{
             Glide.with(itemView.context).load(R.mipmap.sin_imagen).into(imagen)
         }
-
     }
-
-
-
 }
 
 

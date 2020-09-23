@@ -4,7 +4,6 @@ import android.os.Bundle
 import android.os.StrictMode
 import android.view.*
 import android.widget.SearchView
-
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
@@ -21,26 +20,26 @@ Fragment que se carga al iniciar la aplicacion. En este fragment estoy
 cargando dos listas, una con objetos para cada imagen y otra para cada juego.
  */
 class FragmentInicio : Fragment() {
-
-
     var listaJuegos = ArrayList<JuegosItem>()
     var listaJuegosDisplay = ArrayList<JuegosItem>()
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
-        setHasOptionsMenu(true)
         super.onCreate(savedInstanceState)
-
-
+        setHasOptionsMenu(true)
+        retainInstance = true
     }
 
+
+
+
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+
         inflater.inflate(R.menu.menu, menu)
         val menuItem = menu.findItem(R.id.app_bar_search)
 
         if (menuItem != null) {
             val searchView = menuItem.actionView as SearchView
-            searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+            searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener{
                 override fun onQueryTextSubmit(query: String?): Boolean {
                     return true
                 }
@@ -58,6 +57,7 @@ class FragmentInicio : Fragment() {
                     } else {
                         listaJuegosDisplay.clear()
                         listaJuegosDisplay.addAll(listaJuegos)
+
                         recyclerView.adapter!!.notifyDataSetChanged()
                     }
                     return true
@@ -68,16 +68,13 @@ class FragmentInicio : Fragment() {
         super.onCreateOptionsMenu(menu, inflater)
     }
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-
-        return super.onOptionsItemSelected(item)
-    }
-
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
+
         return inflater.inflate(R.layout.fragment_inicio, container, false)
 
     }
@@ -85,6 +82,7 @@ class FragmentInicio : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
         //Modifico politicas de android para poder cargar los datos
         val policy = StrictMode.ThreadPolicy.Builder().permitAll().build()
         StrictMode.setThreadPolicy(policy)
@@ -127,6 +125,7 @@ class FragmentInicio : Fragment() {
             Navigation.findNavController(view).navigate(R.id.datosJuego, bundle)
 
         }
+
     }
 
 
