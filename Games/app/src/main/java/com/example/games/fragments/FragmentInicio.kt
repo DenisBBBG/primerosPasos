@@ -24,10 +24,8 @@ class FragmentInicio : Fragment() {
 
 
     var listaJuegos = ArrayList<JuegosItem>()
-    var listaCovers = ArrayList<CoverItem>()
-
     var listaJuegosDisplay = ArrayList<JuegosItem>()
-    var listaCoversDisplay = ArrayList<CoverItem>()
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         setHasOptionsMenu(true)
@@ -40,46 +38,30 @@ class FragmentInicio : Fragment() {
         inflater.inflate(R.menu.menu, menu)
         val menuItem = menu.findItem(R.id.app_bar_search)
 
-        if (menuItem != null){
+        if (menuItem != null) {
             val searchView = menuItem.actionView as SearchView
-            searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener{
+            searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
                 override fun onQueryTextSubmit(query: String?): Boolean {
                     return true
                 }
 
                 override fun onQueryTextChange(newText: String?): Boolean {
-                    if (newText!!.isNotEmpty()){
+                    if (newText!!.isNotEmpty()) {
                         listaJuegosDisplay.clear()
-                        listaCoversDisplay.clear()
                         val search = newText.toLowerCase(Locale.getDefault())
-                        val userService: JuegoAPI = ServiceBuilder.getServiceBuilder().create(JuegoAPI::class.java)
                         listaJuegos.forEach {
-                            if (it.name.toLowerCase(Locale.getDefault()).contains(search)){
+                            if (it.name.toLowerCase(Locale.getDefault()).contains(search)) {
                                 listaJuegosDisplay.add(it)
-
-                                //Si no tiene caratula se le pone una imagen por defecto
-                                if (it.cover != null) {
-                                    val result2: Call<List<CoverItem>> = userService.getURLCover(it.cover)
-                                    listaCoversDisplay.add(result2.execute().body()!![0])
-                                } else {
-                                    listaCoversDisplay.add(CoverItem("sinURL"))
-                                }
                             }
                         }
-
                         recyclerView.adapter!!.notifyDataSetChanged()
-                    }else{
+                    } else {
                         listaJuegosDisplay.clear()
-                        listaCoversDisplay.clear()
-
                         listaJuegosDisplay.addAll(listaJuegos)
-                        listaCoversDisplay.addAll(listaCovers)
                         recyclerView.adapter!!.notifyDataSetChanged()
                     }
-
                     return true
                 }
-
             })
         }
 
@@ -119,29 +101,26 @@ class FragmentInicio : Fragment() {
 
                 //Si no tiene caratula se le pone una imagen por defecto
                 if (juego.cover != null) {
-
                     val result2: Call<List<CoverItem>> = userService.getURLCover(juego.cover)
-                    listaCovers.add(result2.execute().body()!![0])
+                    juego.coverURL = result2.execute().body()!![0].url
                 } else {
-                    listaCovers.add(CoverItem("sinURL"))
+                    juego.coverURL = "sinURL"
                 }
             }
-
-
         }
-
+        listaJuegosDisplay.clear()
         listaJuegosDisplay.addAll(listaJuegos)
-        listaCoversDisplay.addAll(listaCovers)
+
 
 
         recyclerView.layoutManager =
             LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
 
-        recyclerView.adapter = GamesAdapter(listaJuegosDisplay, listaCoversDisplay) { JuegosItem, CoversItem ->
+        recyclerView.adapter = GamesAdapter(listaJuegosDisplay) { JuegosItem ->
             val bundle = bundleOf(
                 "titulo" to JuegosItem.name,
                 "descripcion" to JuegosItem.summary,
-                "url" to CoversItem.url,
+                "url" to JuegosItem.coverURL,
                 "urlJuego" to JuegosItem.url,
                 "checksum" to JuegosItem.checksum
             )
