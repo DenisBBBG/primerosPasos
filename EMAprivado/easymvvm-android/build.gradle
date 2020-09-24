@@ -1,0 +1,54 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'com.github.dcendents.android-maven'
+group = 'com.github.babel-cdm'
+
+android {
+
+    defaultConfig {
+        minSdkVersion ema.minSdk
+        compileSdkVersion ema.compileSdk
+        targetSdkVersion ema.targetSdk
+        versionCode ema.versionCode
+        versionName ema.versionName
+    }
+
+    buildTypes {
+        debug {
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+}
+
+dependencies {
+    //Navigation
+    api emaAndroid.navigationFragment
+    api emaAndroid.navigationUI
+
+    //Architecture components
+    api emaAndroid.lifecycle
+
+    //Kodein
+    api emaAndroid.kodein
+    api emaAndroid.kodeinAndroid
+
+    //UI
+    api emaAndroid.constraint
+    api emaAndroid.design
+    api emaAndroid.material
+
+    api project(path: ':easymvvm-core')
+}
+
+repositories {
+    mavenCentral()
+}

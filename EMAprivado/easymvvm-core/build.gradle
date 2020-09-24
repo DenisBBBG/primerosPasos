@@ -1,0 +1,8 @@
+apply plugin: 'kotlin'
+apply plugin: 'com.github.dcendents.android-maven'
+group = 'com.github.babel-cdm'
+
+dependencies {
+    api emaCore.kotlin
+    api emaCore.coroutines
+}
