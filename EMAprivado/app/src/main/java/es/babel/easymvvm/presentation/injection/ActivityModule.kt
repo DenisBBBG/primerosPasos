@@ -9,6 +9,7 @@ import es.babel.easymvvm.presentation.ui.error.EmaErrorNavigator
 import es.babel.easymvvm.presentation.ui.error.EmaErrorToolbarViewModel
 import es.babel.easymvvm.presentation.ui.home.EmaHomeNavigator
 import es.babel.easymvvm.presentation.ui.home.EmaHomeToolbarViewModel
+import es.babel.easymvvm.presentation.ui.lista.GamesListNavigator
 import org.kodein.di.Kodein
 import org.kodein.di.generic.bind
 import org.kodein.di.generic.instance
@@ -35,6 +36,8 @@ fun activityInjection(activity: Activity) = Kodein.Module(name = "ActivityModule
     bind<EmaErrorNavigator>() with singleton { EmaErrorNavigator(instance(),instance()) }
 
     bind<EmaHomeNavigator>() with singleton { EmaHomeNavigator(instance(),instance()) }
+
+    bind<GamesListNavigator>() with singleton { GamesListNavigator(instance()) }
 
     bind<EmaBackNavigator>() with singleton { EmaBackNavigator(instance()) }
 

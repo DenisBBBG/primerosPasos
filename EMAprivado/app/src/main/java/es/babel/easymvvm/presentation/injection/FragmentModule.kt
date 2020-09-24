@@ -10,6 +10,7 @@ import es.babel.easymvvm.presentation.dialog.simple.SimpleDialogProvider
 import es.babel.easymvvm.presentation.ui.backdata.userlist.EmaBackUserViewModel
 import es.babel.easymvvm.presentation.ui.backdata.creation.EmaBackUserCreationViewModel
 import es.babel.easymvvm.presentation.ui.home.EmaHomeViewModel
+import es.babel.easymvvm.presentation.ui.lista.GamesListViewModel
 import es.babel.easymvvm.presentation.ui.user.EmaUserViewModel
 import org.kodein.di.Kodein
 import org.kodein.di.generic.bind
@@ -38,6 +39,8 @@ fun fragmentInjection(fragment: Fragment) = Kodein.Module(name = "FragmentModule
     bind<EmaBaseDialogProvider>(tag = DIALOG_TAG_LOADING) with provider { LoadingDialogProvider(instance()) }
 
     bind<EmaHomeViewModel>() with singleton { EmaHomeViewModel(instance(),instance()) }
+
+    bind<GamesListViewModel>() with singleton { GamesListViewModel() }
 
     bind<EmaUserViewModel>() with singleton { EmaUserViewModel(instance()) }
 

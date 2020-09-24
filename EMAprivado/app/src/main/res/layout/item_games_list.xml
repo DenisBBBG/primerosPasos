@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayoutItem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/ivItemGamesListCover"
+        android:layout_width="132dp"
+        android:layout_height="146dp"
+        android:layout_marginTop="3dp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/shape_cover"
+        android:contentDescription="@string/game_cover_description"
+        android:cropToPadding="true"
+        android:foregroundGravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/without_image" />
+
+    <TextView
+        android:id="@+id/tvItemGamesListTitle"
+        android:layout_width="0dp"
+        android:layout_height="146dp"
+        android:background="@drawable/shape_title"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="@string/default_title_of_the_game"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ivItemGamesListCover"
+        app:layout_constraintTop_toTopOf="@+id/ivItemGamesListCover" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
