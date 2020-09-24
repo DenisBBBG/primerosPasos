@@ -3,40 +3,48 @@ package com.example.games
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import kotlinx.android.synthetic.main.item.view.*
 
 
+class GamesAdapter(private val allGames: List<Game>, private val listener: (Game) -> Unit) :
+    RecyclerView.Adapter<GamesViewHolder>() {
 
-class GamesAdapter(val games: List<JuegosItem>, private val listener: (JuegosItem) -> Unit): RecyclerView.Adapter<GamesViewHolder>(){
+    private var games = allGames
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): GamesViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item, parent, false)
-        return GamesViewHolder(view)
-    }
-    override fun getItemCount(): Int {
-        return games.size
+        return GamesViewHolder(view, listener)
     }
 
-    override fun onBindViewHolder(holder: GamesViewHolder, position: Int) {
-        holder.itemView.setOnClickListener{listener(games[position])
+    override fun getItemCount() = games.size
+
+    override fun onBindViewHolder(holder: GamesViewHolder, position: Int) =
+        holder.bind(games[position])
+
+
+    fun filterGames(filter: String) {
+        games = allGames
+        games.filter { game ->
+            game.title?.contains(filter, ignoreCase = true) ?: false
         }
-        return holder.bind(games[position])
+        notifyDataSetChanged()
     }
 }
 
-class GamesViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
-    private val title: TextView = itemView.findViewById(R.id.fragmentoDatosTitulo)
-    private var imagen: ImageView = itemView.findViewById(R.id.fragmentInicioCaratula)
-    fun bind(game: JuegosItem) {
+class GamesViewHolder(itemView: View, private val listener: (Game) -> Unit) :
+    RecyclerView.ViewHolder(itemView) {
 
-        title.text = game.name
+    fun bind(game: Game) {
+        itemView.tvItemTitle.text = game.title
 
-        if(!game?.coverURL.equals("sinURL")){
-            Glide.with(itemView.context).load("https:"+ game?.coverURL).into(imagen)
-        }else{
-            Glide.with(itemView.context).load(R.mipmap.sin_imagen).into(imagen)
+        game.cover?.let { cover ->
+            Glide.with(itemView).load(cover).into(itemView.ivItemCover)
+        } ?: Glide.with(itemView).load(R.drawable.no_cover).into(itemView.ivItemCover)
+
+        itemView.setOnClickListener {
+            listener.invoke(game)
         }
     }
 }
