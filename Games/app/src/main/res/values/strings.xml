@@ -9,4 +9,5 @@
     <string name="web">Página web:</string>
     <string name="checksum">Checksum:</string>
     <string name="search">Search</string>
+    <string name="completeURL">https:</string>
 </resources>

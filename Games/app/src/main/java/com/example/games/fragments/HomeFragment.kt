@@ -13,15 +13,12 @@ import com.example.games.GamesAdapter
 import com.example.games.R
 import kotlinx.android.synthetic.main.fragment_home.*
 import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import okhttp3.internal.notify
 import okhttp3.internal.wait
 import kotlin.coroutines.EmptyCoroutineContext
 
-/*
-Fragment que se carga al iniciar la aplicacion. En este fragment estoy
-cargando dos listas, una con objetos para cada imagen y otra para cada juego.
- */
 class HomeFragment : Fragment() {
 
     private val viewModel = GameListViewModel()
@@ -59,6 +56,7 @@ class HomeFragment : Fragment() {
         super.onCreateOptionsMenu(menu, inflater)
     }
 
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -73,10 +71,13 @@ class HomeFragment : Fragment() {
             LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
 
         ////////////////////////////// Para revisar
+        /*
         var games = ArrayList<Game>()
 
-        CoroutineScope(EmptyCoroutineContext).launch {
+
+        CoroutineScope(Dispatchers.Main).launch {
             games = viewModel.getGames() as ArrayList<Game>
+
         }
 
         rvFragmentHomeGames.adapter = GamesAdapter(games) { game ->
@@ -89,10 +90,12 @@ class HomeFragment : Fragment() {
                     })
         }
 
+         */
+
         ////////////////////////////////
-        /*
-        CoroutineScope(EmptyCoroutineContext).launch {
-            recyclerView.adapter = GamesAdapter(viewModel.getGames()) { game ->
+
+        CoroutineScope(Dispatchers.Main).launch {
+            rvFragmentHomeGames.adapter = GamesAdapter(viewModel.getGames()) { game ->
 
                 Navigation.findNavController(view)
                     .navigate(
@@ -103,7 +106,7 @@ class HomeFragment : Fragment() {
             }
         }
 
-         */
+
 
 
     }

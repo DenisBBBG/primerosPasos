@@ -9,12 +9,7 @@ import com.bumptech.glide.Glide
 import com.example.games.Game
 import com.example.games.R
 import kotlinx.android.synthetic.main.fragment_game_data.*
-import kotlinx.android.synthetic.main.item.view.*
 
-/*
-Fragmento que se llama desde cada item de la lista recyclerview del fragmentoInicio.
-Aqui se cargan datos detallados del juego.
- */
 class GameDataFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {

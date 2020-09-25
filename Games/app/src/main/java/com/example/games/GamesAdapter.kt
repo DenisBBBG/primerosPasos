@@ -1,5 +1,6 @@
 package com.example.games
 
+import android.provider.Settings.System.getString
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -31,7 +32,6 @@ class GamesAdapter(private val allGames: List<Game>, private val listener: (Game
         }
         notifyDataSetChanged()
     }
-
 }
 
 class GamesViewHolder(itemView: View, private val listener: (Game) -> Unit) :
@@ -47,7 +47,10 @@ class GamesViewHolder(itemView: View, private val listener: (Game) -> Unit) :
         itemView.setOnClickListener {
             listener.invoke(game)
         }
+
     }
+
+
 }
 
 

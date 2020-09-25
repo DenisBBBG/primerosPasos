@@ -1384,6 +1384,7 @@ id filled
 id fixed
 id flip
 id forever
+id fragment
 id fragment_container_view_tag
 id ghost_view
 id ghost_view_holder
@@ -1703,6 +1704,7 @@ string bottom_sheet_behavior
 string character_counter_content_description
 string character_counter_pattern
 string checksum
+string completeURL
 string dummy_button
 string dummy_content
 string fab_transformation_scrim_behavior
