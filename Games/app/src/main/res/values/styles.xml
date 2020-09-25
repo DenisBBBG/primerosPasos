@@ -12,4 +12,10 @@
 
     </style>
 
+    <style name="GameDataText">
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:background">@color/blue1</item>
+    </style>
+
 </resources>

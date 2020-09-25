@@ -1,166 +1,98 @@
 [
     {
-        "merged": "C:\\Users\\Makarov\\Documents\\GIT\\primerosPasos\\Games\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_sin_imagen_foreground.png.flat",
-        "source": "C:\\Users\\Makarov\\Documents\\GIT\\primerosPasos\\Games\\app\\src\\main\\res\\mipmap-hdpi\\sin_imagen_foreground.png"
+        "merged": "/Users/denis.bogomilov.local/Documents/primerosPasos/Games/app/build/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "/Users/denis.bogomilov.local/Documents/primerosPasos/Games/app/src/main/res/mipmap-hdpi/ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\Makarov\\Documents\\GIT\\primerosPasos\\Games\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_launcher_background.xml.flat",
-        "source": "C:\\Users\\Makarov\\Documents\\GIT\\primerosPasos\\Games\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
+        "merged": "/Users/denis.bogomilov.local/Documents/primerosPasos/Games/app/build/intermediates/res/merged/debug/drawable_ic_search_black_24dp.xml.flat",
+        "source": "/Users/denis.bogomilov.local/Documents/primerosPasos/Games/app/src/main/res/drawable/ic_search_black_24dp.xml"
     },
     {
-        "merged": "C:\\Users\\Makarov\\Documents\\GIT\\primerosPasos\\Games\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_sin_imagen_round.png.flat",
-        "source": "C:\\Users\\Makarov\\Documents\\GIT\\primerosPasos\\Games\\app\\src\\main\\res\\mipmap-mdpi\\sin_imagen_round.png"
+        "merged": "/Users/denis.bogomilov.local/Documents/primerosPasos/Games/app/build/intermediates/res/merged/debug/layout_item.xml.flat",
+        "source": "/Users/denis.bogomilov.local/Documents/primerosPasos/Games/app/src/main/res/layout/item.xml"
     },
     {
-        "merged": "C:\\Users\\Makarov\\Documents\\GIT\\primerosPasos\\Games\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\Makarov\\Documents\\GIT\\primerosPasos\\Games\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
+        "merged": "/Users/denis.bogomilov.local/Documents/primerosPasos/Games/app/build/intermediates/res/merged/debug/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "/Users/denis.bogomilov.local/Documents/primerosPasos/Games/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml"
     },
     {
-        "merged": "C:\\Users\\Makarov\\Documents\\GIT\\primerosPasos\\Games\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\Makarov\\Documents\\GIT\\primerosPasos\\Games\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+        "merged": "/Users/denis.bogomilov.local/Documents/primerosPasos/Games/app/build/intermediates/res/merged/debug/drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "/Users/denis.bogomilov.local/Documents/primerosPasos/Games/app/src/main/res/drawable-v24/ic_launcher_foreground.xml"
     },
     {
-        "merged": "C:\\Users\\Makarov\\Documents\\GIT\\primerosPasos\\Games\\app\\build\\intermediates\\res\\merged\\debug\\layout_item.xml.flat",
-        "source": "C:\\Users\\Makarov\\Documents\\GIT\\primerosPasos\\Games\\app\\src\\main\\res\\layout\\item.xml"
+        "merged": "/Users/denis.bogomilov.local/Documents/primerosPasos/Games/app/build/intermediates/res/merged/debug/drawable_background_titulo_lista.xml.flat",
+        "source": "/Users/denis.bogomilov.local/Documents/primerosPasos/Games/app/src/main/res/drawable/background_titulo_lista.xml"
     },
     {
-        "merged": "C:\\Users\\Makarov\\Documents\\GIT\\primerosPasos\\Games\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\Makarov\\Documents\\GIT\\primerosPasos\\Games\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
+        "merged": "/Users/denis.bogomilov.local/Documents/primerosPasos/Games/app/build/intermediates/res/merged/debug/layout_fragment_home.xml.flat",
+        "source": "/Users/denis.bogomilov.local/Documents/primerosPasos/Games/app/src/main/res/layout/fragment_home.xml"
     },
     {
-        "merged": "C:\\Users\\Makarov\\Documents\\GIT\\primerosPasos\\Games\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_sin_imagen_foreground.png.flat",
-        "source": "C:\\Users\\Makarov\\Documents\\GIT\\primerosPasos\\Games\\app\\src\\main\\res\\mipmap-xhdpi\\sin_imagen_foreground.png"
+        "merged": "/Users/denis.bogomilov.local/Documents/primerosPasos/Games/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "/Users/denis.bogomilov.local/Documents/primerosPasos/Games/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\Makarov\\Documents\\GIT\\primerosPasos\\Games\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_sin_imagen_round.png.flat",
-        "source": "C:\\Users\\Makarov\\Documents\\GIT\\primerosPasos\\Games\\app\\src\\main\\res\\mipmap-xxhdpi\\sin_imagen_round.png"
+        "merged": "/Users/denis.bogomilov.local/Documents/primerosPasos/Games/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "/Users/denis.bogomilov.local/Documents/primerosPasos/Games/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\Makarov\\Documents\\GIT\\primerosPasos\\Games\\app\\build\\intermediates\\res\\merged\\debug\\drawable_background_titulo_lista.xml.flat",
-        "source": "C:\\Users\\Makarov\\Documents\\GIT\\primerosPasos\\Games\\app\\src\\main\\res\\drawable\\background_titulo_lista.xml"
+        "merged": "/Users/denis.bogomilov.local/Documents/primerosPasos/Games/app/build/intermediates/res/merged/debug/mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "/Users/denis.bogomilov.local/Documents/primerosPasos/Games/app/src/main/res/mipmap-mdpi/ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\Makarov\\Documents\\GIT\\primerosPasos\\Games\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_sin_imagen_round.png.flat",
-        "source": "C:\\Users\\Makarov\\Documents\\GIT\\primerosPasos\\Games\\app\\src\\main\\res\\mipmap-hdpi\\sin_imagen_round.png"
+        "merged": "/Users/denis.bogomilov.local/Documents/primerosPasos/Games/app/build/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "/Users/denis.bogomilov.local/Documents/primerosPasos/Games/app/src/main/res/mipmap-hdpi/ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\Makarov\\Documents\\GIT\\primerosPasos\\Games\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_datos_juego.xml.flat",
-        "source": "C:\\Users\\Makarov\\Documents\\GIT\\primerosPasos\\Games\\app\\src\\main\\res\\layout\\fragment_datos_juego.xml"
+        "merged": "/Users/denis.bogomilov.local/Documents/primerosPasos/Games/app/build/intermediates/res/merged/debug/mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "/Users/denis.bogomilov.local/Documents/primerosPasos/Games/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\Makarov\\Documents\\GIT\\primerosPasos\\Games\\app\\build\\intermediates\\res\\merged\\debug\\navigation_nav_graph.xml.flat",
-        "source": "C:\\Users\\Makarov\\Documents\\GIT\\primerosPasos\\Games\\app\\src\\main\\res\\navigation\\nav_graph.xml"
+        "merged": "/Users/denis.bogomilov.local/Documents/primerosPasos/Games/app/build/intermediates/res/merged/debug/menu_menu.xml.flat",
+        "source": "/Users/denis.bogomilov.local/Documents/primerosPasos/Games/app/src/main/res/menu/menu.xml"
     },
     {
-        "merged": "C:\\Users\\Makarov\\Documents\\GIT\\primerosPasos\\Games\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\Makarov\\Documents\\GIT\\primerosPasos\\Games\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+        "merged": "/Users/denis.bogomilov.local/Documents/primerosPasos/Games/app/build/intermediates/res/merged/debug/drawable_no_cover.png.flat",
+        "source": "/Users/denis.bogomilov.local/Documents/primerosPasos/Games/app/src/main/res/drawable/no_cover.png"
     },
     {
-        "merged": "C:\\Users\\Makarov\\Documents\\GIT\\primerosPasos\\Games\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "C:\\Users\\Makarov\\Documents\\GIT\\primerosPasos\\Games\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+        "merged": "/Users/denis.bogomilov.local/Documents/primerosPasos/Games/app/build/intermediates/res/merged/debug/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "/Users/denis.bogomilov.local/Documents/primerosPasos/Games/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml"
     },
     {
-        "merged": "C:\\Users\\Makarov\\Documents\\GIT\\primerosPasos\\Games\\app\\build\\intermediates\\res\\merged\\debug\\menu_menu.xml.flat",
-        "source": "C:\\Users\\Makarov\\Documents\\GIT\\primerosPasos\\Games\\app\\src\\main\\res\\menu\\menu.xml"
+        "merged": "/Users/denis.bogomilov.local/Documents/primerosPasos/Games/app/build/intermediates/res/merged/debug/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "/Users/denis.bogomilov.local/Documents/primerosPasos/Games/app/src/main/res/mipmap-mdpi/ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\Makarov\\Documents\\GIT\\primerosPasos\\Games\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_search_black_24dp.xml.flat",
-        "source": "C:\\Users\\Makarov\\Documents\\GIT\\primerosPasos\\Games\\app\\src\\main\\res\\drawable\\ic_search_black_24dp.xml"
+        "merged": "/Users/denis.bogomilov.local/Documents/primerosPasos/Games/app/build/intermediates/res/merged/debug/layout_activity_main.xml.flat",
+        "source": "/Users/denis.bogomilov.local/Documents/primerosPasos/Games/app/src/main/res/layout/activity_main.xml"
     },
     {
-        "merged": "C:\\Users\\Makarov\\Documents\\GIT\\primerosPasos\\Games\\app\\build\\intermediates\\res\\merged\\debug\\drawable_caratula_background.xml.flat",
-        "source": "C:\\Users\\Makarov\\Documents\\GIT\\primerosPasos\\Games\\app\\src\\main\\res\\drawable\\caratula_background.xml"
+        "merged": "/Users/denis.bogomilov.local/Documents/primerosPasos/Games/app/build/intermediates/res/merged/debug/layout_fragment_game_data.xml.flat",
+        "source": "/Users/denis.bogomilov.local/Documents/primerosPasos/Games/app/src/main/res/layout/fragment_game_data.xml"
     },
     {
-        "merged": "C:\\Users\\Makarov\\Documents\\GIT\\primerosPasos\\Games\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\Makarov\\Documents\\GIT\\primerosPasos\\Games\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
+        "merged": "/Users/denis.bogomilov.local/Documents/primerosPasos/Games/app/build/intermediates/res/merged/debug/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "/Users/denis.bogomilov.local/Documents/primerosPasos/Games/app/src/main/res/mipmap-xhdpi/ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\Makarov\\Documents\\GIT\\primerosPasos\\Games\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\Makarov\\Documents\\GIT\\primerosPasos\\Games\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
+        "merged": "/Users/denis.bogomilov.local/Documents/primerosPasos/Games/app/build/intermediates/res/merged/debug/drawable_caratula_background.xml.flat",
+        "source": "/Users/denis.bogomilov.local/Documents/primerosPasos/Games/app/src/main/res/drawable/caratula_background.xml"
     },
     {
-        "merged": "C:\\Users\\Makarov\\Documents\\GIT\\primerosPasos\\Games\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "C:\\Users\\Makarov\\Documents\\GIT\\primerosPasos\\Games\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
+        "merged": "/Users/denis.bogomilov.local/Documents/primerosPasos/Games/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "/Users/denis.bogomilov.local/Documents/primerosPasos/Games/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\Makarov\\Documents\\GIT\\primerosPasos\\Games\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_sin_imagen_round.png.flat",
-        "source": "C:\\Users\\Makarov\\Documents\\GIT\\primerosPasos\\Games\\app\\src\\main\\res\\mipmap-xhdpi\\sin_imagen_round.png"
+        "merged": "/Users/denis.bogomilov.local/Documents/primerosPasos/Games/app/build/intermediates/res/merged/debug/drawable_ic_launcher_background.xml.flat",
+        "source": "/Users/denis.bogomilov.local/Documents/primerosPasos/Games/app/src/main/res/drawable/ic_launcher_background.xml"
     },
     {
-        "merged": "C:\\Users\\Makarov\\Documents\\GIT\\primerosPasos\\Games\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_sin_imagen_foreground.png.flat",
-        "source": "C:\\Users\\Makarov\\Documents\\GIT\\primerosPasos\\Games\\app\\src\\main\\res\\mipmap-mdpi\\sin_imagen_foreground.png"
+        "merged": "/Users/denis.bogomilov.local/Documents/primerosPasos/Games/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "/Users/denis.bogomilov.local/Documents/primerosPasos/Games/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\Makarov\\Documents\\GIT\\primerosPasos\\Games\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\Makarov\\Documents\\GIT\\primerosPasos\\Games\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
-    },
-    {
-        "merged": "C:\\Users\\Makarov\\Documents\\GIT\\primerosPasos\\Games\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\Makarov\\Documents\\GIT\\primerosPasos\\Games\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
-    },
-    {
-        "merged": "C:\\Users\\Makarov\\Documents\\GIT\\primerosPasos\\Games\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_sin_imagen.png.flat",
-        "source": "C:\\Users\\Makarov\\Documents\\GIT\\primerosPasos\\Games\\app\\src\\main\\res\\mipmap-xxxhdpi\\sin_imagen.png"
-    },
-    {
-        "merged": "C:\\Users\\Makarov\\Documents\\GIT\\primerosPasos\\Games\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\Makarov\\Documents\\GIT\\primerosPasos\\Games\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
-    },
-    {
-        "merged": "C:\\Users\\Makarov\\Documents\\GIT\\primerosPasos\\Games\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_sin_imagen.png.flat",
-        "source": "C:\\Users\\Makarov\\Documents\\GIT\\primerosPasos\\Games\\app\\src\\main\\res\\mipmap-mdpi\\sin_imagen.png"
-    },
-    {
-        "merged": "C:\\Users\\Makarov\\Documents\\GIT\\primerosPasos\\Games\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_sin_imagen_foreground.png.flat",
-        "source": "C:\\Users\\Makarov\\Documents\\GIT\\primerosPasos\\Games\\app\\src\\main\\res\\mipmap-xxhdpi\\sin_imagen_foreground.png"
-    },
-    {
-        "merged": "C:\\Users\\Makarov\\Documents\\GIT\\primerosPasos\\Games\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_sin_imagen.xml.flat",
-        "source": "C:\\Users\\Makarov\\Documents\\GIT\\primerosPasos\\Games\\app\\src\\main\\res\\mipmap-anydpi-v26\\sin_imagen.xml"
-    },
-    {
-        "merged": "C:\\Users\\Makarov\\Documents\\GIT\\primerosPasos\\Games\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\Makarov\\Documents\\GIT\\primerosPasos\\Games\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
-    },
-    {
-        "merged": "C:\\Users\\Makarov\\Documents\\GIT\\primerosPasos\\Games\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_sin_imagen_round.png.flat",
-        "source": "C:\\Users\\Makarov\\Documents\\GIT\\primerosPasos\\Games\\app\\src\\main\\res\\mipmap-xxxhdpi\\sin_imagen_round.png"
-    },
-    {
-        "merged": "C:\\Users\\Makarov\\Documents\\GIT\\primerosPasos\\Games\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_sin_imagen_round.xml.flat",
-        "source": "C:\\Users\\Makarov\\Documents\\GIT\\primerosPasos\\Games\\app\\src\\main\\res\\mipmap-anydpi-v26\\sin_imagen_round.xml"
-    },
-    {
-        "merged": "C:\\Users\\Makarov\\Documents\\GIT\\primerosPasos\\Games\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_sin_imagen.png.flat",
-        "source": "C:\\Users\\Makarov\\Documents\\GIT\\primerosPasos\\Games\\app\\src\\main\\res\\mipmap-xhdpi\\sin_imagen.png"
-    },
-    {
-        "merged": "C:\\Users\\Makarov\\Documents\\GIT\\primerosPasos\\Games\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_sin_imagen_foreground.png.flat",
-        "source": "C:\\Users\\Makarov\\Documents\\GIT\\primerosPasos\\Games\\app\\src\\main\\res\\mipmap-xxxhdpi\\sin_imagen_foreground.png"
-    },
-    {
-        "merged": "C:\\Users\\Makarov\\Documents\\GIT\\primerosPasos\\Games\\app\\build\\intermediates\\res\\merged\\debug\\drawable_no_cover.png.flat",
-        "source": "C:\\Users\\Makarov\\Documents\\GIT\\primerosPasos\\Games\\app\\src\\main\\res\\drawable\\no_cover.png"
-    },
-    {
-        "merged": "C:\\Users\\Makarov\\Documents\\GIT\\primerosPasos\\Games\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_launcher_foreground.xml.flat",
-        "source": "C:\\Users\\Makarov\\Documents\\GIT\\primerosPasos\\Games\\app\\src\\main\\res\\drawable-v24\\ic_launcher_foreground.xml"
-    },
-    {
-        "merged": "C:\\Users\\Makarov\\Documents\\GIT\\primerosPasos\\Games\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_sin_imagen.png.flat",
-        "source": "C:\\Users\\Makarov\\Documents\\GIT\\primerosPasos\\Games\\app\\src\\main\\res\\mipmap-hdpi\\sin_imagen.png"
-    },
-    {
-        "merged": "C:\\Users\\Makarov\\Documents\\GIT\\primerosPasos\\Games\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_inicio.xml.flat",
-        "source": "C:\\Users\\Makarov\\Documents\\GIT\\primerosPasos\\Games\\app\\src\\main\\res\\layout\\fragment_inicio.xml"
-    },
-    {
-        "merged": "C:\\Users\\Makarov\\Documents\\GIT\\primerosPasos\\Games\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
-        "source": "C:\\Users\\Makarov\\Documents\\GIT\\primerosPasos\\Games\\app\\src\\main\\res\\layout\\activity_main.xml"
-    },
-    {
-        "merged": "C:\\Users\\Makarov\\Documents\\GIT\\primerosPasos\\Games\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_sin_imagen.png.flat",
-        "source": "C:\\Users\\Makarov\\Documents\\GIT\\primerosPasos\\Games\\app\\src\\main\\res\\mipmap-xxhdpi\\sin_imagen.png"
+        "merged": "/Users/denis.bogomilov.local/Documents/primerosPasos/Games/app/build/intermediates/res/merged/debug/navigation_nav_graph.xml.flat",
+        "source": "/Users/denis.bogomilov.local/Documents/primerosPasos/Games/app/src/main/res/navigation/nav_graph.xml"
     }
 ]
