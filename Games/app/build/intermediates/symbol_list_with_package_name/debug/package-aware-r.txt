@@ -1405,7 +1405,6 @@ id ignore
 id ignoreRequest
 id image
 id info
-id initial_fragment
 id invisible
 id italic
 id item_touch_helper_previous_elevation
@@ -1464,11 +1463,11 @@ id progress_horizontal
 id radio
 id ratio
 id rectangles
-id recyclerView
 id reverseSawtooth
 id right
 id right_icon
 id right_side
+id rvFragmentHomeGames
 id save_non_transition_alpha
 id save_overlay_view
 id sawtooth

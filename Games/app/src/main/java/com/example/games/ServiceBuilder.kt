@@ -15,7 +15,7 @@ class ServiceBuilder {
             val interceptor = HttpLoggingInterceptor()
             interceptor.setLevel(HttpLoggingInterceptor.Level.BODY)
 
-            val client = OkHttpClient.Builder().addInterceptor(interceptor).build()
+           val client = OkHttpClient.Builder().addInterceptor(interceptor).build()
             return Retrofit.Builder()
                 .baseUrl("https://api-v3.igdb.com/")
                 .addConverterFactory(GsonConverterFactory.create())

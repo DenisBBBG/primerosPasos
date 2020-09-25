@@ -14,6 +14,8 @@ import com.example.games.R
 import kotlinx.android.synthetic.main.fragment_home.*
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
+import okhttp3.internal.notify
+import okhttp3.internal.wait
 import kotlin.coroutines.EmptyCoroutineContext
 
 /*
@@ -45,7 +47,7 @@ class HomeFragment : Fragment() {
 
                 override fun onQueryTextChange(newText: String?): Boolean {
                     newText?.let { text ->
-                        recyclerView.adapter?.let { adapter ->
+                        rvFragmentHomeGames.adapter?.let { adapter ->
                             (adapter as GamesAdapter).filterGames(text)
                         }
                     }
@@ -67,9 +69,28 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        recyclerView.layoutManager =
+        rvFragmentHomeGames.layoutManager =
             LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
 
+        ////////////////////////////// Para revisar
+        var games = ArrayList<Game>()
+
+        CoroutineScope(EmptyCoroutineContext).launch {
+            games = viewModel.getGames() as ArrayList<Game>
+        }
+
+        rvFragmentHomeGames.adapter = GamesAdapter(games) { game ->
+
+            Navigation.findNavController(view)
+                .navigate(
+                    R.id.navGraphAction_fragmentHome_to_gameData,
+                    Bundle().also { bundle ->
+                        bundle.putSerializable(Game::class.java.name, game)
+                    })
+        }
+
+        ////////////////////////////////
+        /*
         CoroutineScope(EmptyCoroutineContext).launch {
             recyclerView.adapter = GamesAdapter(viewModel.getGames()) { game ->
 
@@ -81,6 +102,9 @@ class HomeFragment : Fragment() {
                         })
             }
         }
+
+         */
+
 
     }
 }

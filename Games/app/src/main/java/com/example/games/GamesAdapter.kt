@@ -31,6 +31,7 @@ class GamesAdapter(private val allGames: List<Game>, private val listener: (Game
         }
         notifyDataSetChanged()
     }
+
 }
 
 class GamesViewHolder(itemView: View, private val listener: (Game) -> Unit) :
