@@ -2,7 +2,6 @@ package com.example.games.fragments
 
 import android.os.Bundle
 import android.view.*
-import android.view.contentcapture.ContentCaptureContext
 import android.widget.SearchView
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
@@ -15,9 +14,6 @@ import kotlinx.android.synthetic.main.fragment_home.*
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import okhttp3.internal.notify
-import okhttp3.internal.wait
-import kotlin.coroutines.EmptyCoroutineContext
 
 class HomeFragment : Fragment() {
 
@@ -70,44 +66,17 @@ class HomeFragment : Fragment() {
         rvFragmentHomeGames.layoutManager =
             LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
 
-        ////////////////////////////// Para revisar
-        /*
-        var games = ArrayList<Game>()
-
-
         CoroutineScope(Dispatchers.Main).launch {
-            games = viewModel.getGames() as ArrayList<Game>
+            rvFragmentHomeGames.adapter =
+                GamesAdapter(viewModel.getGames(getString(R.string.completeURL))) { game ->
 
+                    Navigation.findNavController(view)
+                        .navigate(
+                            R.id.navGraphAction_fragmentHome_to_gameData,
+                            Bundle().also { bundle ->
+                                bundle.putSerializable(Game::class.java.name, game)
+                            })
+                }
         }
-
-        rvFragmentHomeGames.adapter = GamesAdapter(games) { game ->
-
-            Navigation.findNavController(view)
-                .navigate(
-                    R.id.navGraphAction_fragmentHome_to_gameData,
-                    Bundle().also { bundle ->
-                        bundle.putSerializable(Game::class.java.name, game)
-                    })
-        }
-
-         */
-
-        ////////////////////////////////
-
-        CoroutineScope(Dispatchers.Main).launch {
-            rvFragmentHomeGames.adapter = GamesAdapter(viewModel.getGames()) { game ->
-
-                Navigation.findNavController(view)
-                    .navigate(
-                        R.id.navGraphAction_fragmentHome_to_gameData,
-                        Bundle().also { bundle ->
-                            bundle.putSerializable(Game::class.java.name, game)
-                        })
-            }
-        }
-
-
-
-
     }
 }

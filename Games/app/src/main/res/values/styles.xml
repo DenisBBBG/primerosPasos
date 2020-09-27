@@ -7,15 +7,17 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <style name="itemText">
+    <style name="title">
         <item name="android:gravity">center</item>
-
+        <item name="android:textSize">30sp</item>
+        <item name="color">@color/white</item>
     </style>
 
     <style name="GameDataText">
         <item name="android:gravity">center</item>
         <item name="android:layout_marginTop">10dp</item>
         <item name="android:background">@color/blue1</item>
+        <item name="android:textSize">20sp</item>
     </style>
 
 </resources>

@@ -885,6 +885,7 @@ int color switch_thumb_normal_material_dark 0x7f050084
 int color switch_thumb_normal_material_light 0x7f050085
 int color tooltip_background_dark 0x7f050086
 int color tooltip_background_light 0x7f050087
+int color white 0x7f050088
 int dimen abc_action_bar_content_inset_material 0x7f060000
 int dimen abc_action_bar_content_inset_with_nav 0x7f060001
 int dimen abc_action_bar_default_height_material 0x7f060002
@@ -2230,7 +2231,7 @@ int style Widget_MaterialComponents_TextInputLayout_OutlinedBox 0x7f1001f7
 int style Widget_MaterialComponents_TextInputLayout_OutlinedBox_Dense 0x7f1001f8
 int style Widget_MaterialComponents_Toolbar 0x7f1001f9
 int style Widget_Support_CoordinatorLayout 0x7f1001fa
-int style itemText 0x7f1001fb
+int style title 0x7f1001fb
 int[] styleable ActionBar { 0x7f030039, 0x7f03003a, 0x7f03003b, 0x7f0300a7, 0x7f0300a8, 0x7f0300a9, 0x7f0300aa, 0x7f0300ab, 0x7f0300ac, 0x7f0300c4, 0x7f0300d4, 0x7f0300d5, 0x7f0300ee, 0x7f03012f, 0x7f030134, 0x7f030139, 0x7f03013a, 0x7f03013c, 0x7f030146, 0x7f030150, 0x7f0301af, 0x7f0301d2, 0x7f0301f9, 0x7f0301fd, 0x7f0301fe, 0x7f030238, 0x7f03023b, 0x7f030286, 0x7f030290 }
 int styleable ActionBar_background 0
 int styleable ActionBar_backgroundSplit 1

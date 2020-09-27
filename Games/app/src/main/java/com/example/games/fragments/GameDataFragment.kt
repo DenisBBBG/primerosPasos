@@ -12,11 +12,11 @@ import kotlinx.android.synthetic.main.fragment_game_data.*
 
 class GameDataFragment : Fragment() {
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
     }
-
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -29,25 +29,21 @@ class GameDataFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        val game = arguments?.getSerializable(Game::class.java.name) as? Game
 
-        Bundle().also { bundle ->
-            val game: Game = bundle.getSerializable(Game::class.java.name) as Game
-
-            tvGameDataFragmentTitle.text = game.title
-            if (game.summary.isNullOrEmpty()) {
-                tvGameDataFragmentSummary.text = getString(R.string.sin_descripcion)
-            } else {
-                tvGameDataFragmentSummary.text = game.summary
-            }
-            tvGameDataFragmentURL.text = game.url
-            tvGameDataFragmentChecksum.text = game.checksum
-
-            game.cover?.let { cover ->
-                Glide.with(view).load(cover).into(ivGameDataFragmentCover)
-            } ?: Glide.with(view).load(R.drawable.no_cover).into(ivGameDataFragmentCover)
-
-
+        tvGameDataFragmentTitle.text = game?.title
+        if (game?.summary.isNullOrEmpty()) {
+            tvGameDataFragmentSummary.text = getString(R.string.sin_descripcion)
+        } else {
+            tvGameDataFragmentSummary.text = game?.summary
         }
+        tvGameDataFragmentURL.text = game?.url
+        tvGameDataFragmentChecksum.text = game?.checksum
+
+        game?.cover?.let { cover ->
+            Glide.with(view).load(cover).into(ivGameDataFragmentCover)
+        } ?: Glide.with(view).load(R.drawable.no_cover).into(ivGameDataFragmentCover)
+
 
     }
 

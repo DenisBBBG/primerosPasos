@@ -30,7 +30,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@id/glItemSeparator"
         tools:text="Tomb Raider"
-        style="@style/itemText"/>
+        style="@style/title"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

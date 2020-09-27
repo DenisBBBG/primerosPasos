@@ -1,6 +1,5 @@
 package com.example.games
 
-import android.provider.Settings.System.getString
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -27,11 +26,13 @@ class GamesAdapter(private val allGames: List<Game>, private val listener: (Game
 
     fun filterGames(filter: String) {
         games = allGames
-        games.filter { game ->
+        ////////////////revisar
+        games = games.filter { game ->
             game.title?.contains(filter, ignoreCase = true) ?: false
         }
         notifyDataSetChanged()
     }
+
 }
 
 class GamesViewHolder(itemView: View, private val listener: (Game) -> Unit) :

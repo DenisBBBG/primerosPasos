@@ -2,7 +2,6 @@ package com.example.games
 
 import com.google.gson.annotations.SerializedName
 
-
 typealias CoverResponse = List<CoverResponseItem>
 
 data class CoverResponseItem(
