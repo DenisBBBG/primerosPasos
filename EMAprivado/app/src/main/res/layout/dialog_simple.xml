@@ -2,7 +2,6 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/shape_dialog_white"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
@@ -21,7 +20,6 @@
 
         <Button
             android:id="@+id/bDialogSimpleYes"
-            style="@style/ButtonRed"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/space_very_big"
@@ -39,7 +37,6 @@
 
         <Button
             android:id="@+id/bDialogSimpleNo"
-            style="@style/ButtonWhite"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/space_very_big"
@@ -67,7 +64,6 @@
 
         <TextView
             android:id="@+id/tvDialogSimpleTitle"
-            style="@style/DialogTitle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -78,7 +74,6 @@
 
         <TextView
             android:id="@+id/tvDialogSimpleMessage"
-            style="@style/DialogMessage"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_below="@id/tvDialogSimpleTitle"

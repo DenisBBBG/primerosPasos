@@ -1,10 +1,8 @@
 package es.babel.injection
 
 import es.babel.data.manager.AndroidResourceManager
-import es.babel.data.repository.MockRepository
 import es.babel.domain.manager.ResourceManager
-import es.babel.domain.repository.Repository
-import es.babel.domain.usecase.LoginUseCase
+import es.babel.domain.usecase.GetGamesUseCase
 import org.kodein.di.Kodein
 import org.kodein.di.generic.bind
 import org.kodein.di.generic.instance
@@ -23,9 +21,9 @@ import org.kodein.di.generic.singleton
 
 fun appDataInjection() = Kodein.Module(name = "AppDataModule") {
 
-   bind<Repository>() with singleton { MockRepository() }
+   bind<es.babel.domain.repository.Repository>() with singleton { es.babel.data.repository.Repository() }
 
-   bind<LoginUseCase>() with provider { LoginUseCase(instance()) }
+   bind<GetGamesUseCase>() with provider { GetGamesUseCase(instance()) }
 
    bind<ResourceManager>() with singleton { AndroidResourceManager(instance()) }
 }

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/graphHome"
+    app:startDestination="@id/gamesListFragment">
+
+
+    <fragment
+        android:id="@+id/gamesListFragment"
+        android:name="es.babel.easymvvm.presentation.ui.list.GamesListFragment"
+        tools:layout="@layout/fragment_games_list">
+        <action
+            android:id="@+id/navGraphAction_fragmentHome_to_gameData"
+            app:destination="@id/gameDataFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameDataFragment"
+        android:name="es.babel.easymvvm.presentation.ui.data.GameDataFragment"
+        tools:layout="@layout/fragment_game_data" />
+
+
+</navigation>

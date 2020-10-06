@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.bumptech.glide.Glide
-import com.example.games.Game
+import com.example.games.GameModel
 import com.example.games.R
 import kotlinx.android.synthetic.main.fragment_game_data.*
 
@@ -22,29 +22,29 @@ class GameDataFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_game_data, container, false)
 
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val game = arguments?.getSerializable(Game::class.java.name) as? Game
 
-        tvGameDataFragmentTitle.text = game?.title
-        if (game?.summary.isNullOrEmpty()) {
-            tvGameDataFragmentSummary.text = getString(R.string.sin_descripcion)
-        } else {
-            tvGameDataFragmentSummary.text = game?.summary
+        arguments?.let { arg ->
+            val game = arg.getSerializable(GameModel::class.java.name) as GameModel
+            tvGameDataTitle.text = game.title
+            if (game.summary.isNullOrEmpty()) {
+                tvGameDataSummary.text = getString(R.string.games_data_no_description)
+            } else {
+                tvGameDataSummary.text = game.summary
+            }
+            tvGameDataURL.text = game.url
+            tvGameDataChecksum.text = game.checksum
+
+            game.cover?.let { cover ->
+                Glide.with(view).load(cover).into(ivGameDataCover)
+            } ?: Glide.with(view).load(R.drawable.no_cover).into(ivGameDataCover)
+
         }
-        tvGameDataFragmentURL.text = game?.url
-        tvGameDataFragmentChecksum.text = game?.checksum
-
-        game?.cover?.let { cover ->
-            Glide.with(view).load(cover).into(ivGameDataFragmentCover)
-        } ?: Glide.with(view).load(R.drawable.no_cover).into(ivGameDataFragmentCover)
-
-
     }
 
 

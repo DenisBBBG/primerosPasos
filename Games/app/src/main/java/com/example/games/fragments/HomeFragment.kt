@@ -6,7 +6,7 @@ import android.widget.SearchView
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.games.Game
+import com.example.games.GameModel
 import com.example.games.GameListViewModel
 import com.example.games.GamesAdapter
 import com.example.games.R
@@ -68,13 +68,13 @@ class HomeFragment : Fragment() {
 
         CoroutineScope(Dispatchers.Main).launch {
             rvFragmentHomeGames.adapter =
-                GamesAdapter(viewModel.getGames(getString(R.string.completeURL))) { game ->
+                GamesAdapter(viewModel.getGames()) { game ->
 
                     Navigation.findNavController(view)
                         .navigate(
                             R.id.navGraphAction_fragmentHome_to_gameData,
                             Bundle().also { bundle ->
-                                bundle.putSerializable(Game::class.java.name, game)
+                                bundle.putSerializable(GameModel::class.java.name, game)
                             })
                 }
         }

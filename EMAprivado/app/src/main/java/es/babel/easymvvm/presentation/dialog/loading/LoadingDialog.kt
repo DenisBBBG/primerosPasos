@@ -17,7 +17,6 @@ class LoadingDialog : EmaBaseDialog<LoadingDialogData>() {
 
     override fun setupData(data: LoadingDialogData, view: View) {
         view.tvDialogLoadingTitle.text = data.title
-        view.tvDialogLoadingMessage.text = data.message
 
         isCancelable = false
     }

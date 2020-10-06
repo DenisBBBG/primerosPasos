@@ -2,36 +2,74 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/constraintLayoutItem"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="@dimen/item_parent_layout_height"
+    android:layout_marginHorizontal="@dimen/games_item_parent_layout_margin_horizontal"
+    android:layout_marginTop="@dimen/games_item_parent_layout_margin_top"
+    android:layout_marginBottom="@dimen/games_item_parent_layout_margin_bottom">
 
     <ImageView
-        android:id="@+id/ivItemGamesListCover"
-        android:layout_width="132dp"
-        android:layout_height="146dp"
-        android:layout_marginTop="3dp"
-        android:adjustViewBounds="true"
-        android:background="@drawable/shape_cover"
-        android:contentDescription="@string/game_cover_description"
-        android:cropToPadding="true"
-        android:foregroundGravity="center"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/without_image" />
+        android:id="@+id/ivItemFrame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/games_item_frame_content_description"
+        android:scaleType="fitXY"
+        tools:src="@drawable/item_frame" />
 
-    <TextView
-        android:id="@+id/tvItemGamesListTitle"
-        android:layout_width="0dp"
-        android:layout_height="146dp"
-        android:background="@drawable/shape_title"
-        android:gravity="center"
-        android:padding="5dp"
-        android:text="@string/default_title_of_the_game"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textSize="25sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/ivItemGamesListCover"
-        app:layout_constraintTop_toTopOf="@+id/ivItemGamesListCover" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glItemLeftSeparator"
+        android:layout_width="@dimen/match_constraint"
+        android:layout_height="@dimen/match_constraint"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.03" />
 
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="@dimen/match_constraint"
+        android:layout_height="@dimen/match_constraint"
+        android:layout_marginVertical="@dimen/games_item_child_layout_margin_vertical"
+        android:background="@drawable/item_background_child_layout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/glItemRightSeparator"
+        app:layout_constraintStart_toStartOf="@id/glItemLeftSeparator"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/ivItemCover"
+            android:layout_width="@dimen/match_constraint"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/games_cover_content_description"
+            android:scaleType="fitStart"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/glItemCoverTitleSeparator"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/no_cover" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glItemCoverTitleSeparator"
+            android:layout_width="@dimen/match_constraint"
+            android:layout_height="@dimen/match_constraint"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.35" />
+
+        <TextView
+            android:id="@+id/tvItemTitle"
+            style="@style/GamesItemTitle"
+            android:layout_width="@dimen/match_constraint"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/glItemCoverTitleSeparator"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Tomb Raider" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glItemRightSeparator"
+        android:layout_width="@dimen/match_constraint"
+        android:layout_height="@dimen/match_constraint"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.97" />
 </androidx.constraintlayout.widget.ConstraintLayout>

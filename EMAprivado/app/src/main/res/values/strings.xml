@@ -1,6 +1,12 @@
 <resources>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="default_title_of_the_game">Title of the game</string>
-    <string name="game_cover_description">Default game cover</string>
+
+    <!--Games Data Fragment-->
+    <string name="games_data_no_description" translatable="false">Sin descripción.</string>
+
+    <!--Search menu-->
+    <string name="menu_search" translatable="false">Search</string>
+
+    <!--Content description-->
+    <string name="games_cover_content_description" translatable="false">Game Cover</string>
+    <string name="games_item_frame_content_description" translatable="false">Frame design to item.</string>
 </resources>

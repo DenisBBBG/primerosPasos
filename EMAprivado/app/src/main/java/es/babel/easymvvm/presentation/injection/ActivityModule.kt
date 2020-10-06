@@ -3,13 +3,9 @@ package es.babel.easymvvm.presentation.injection
 import android.app.Activity
 import androidx.navigation.NavController
 import es.babel.easymvvm.android.ui.EmaFragmentActivity
-import es.babel.easymvvm.presentation.ui.backdata.EmaBackNavigator
-import es.babel.easymvvm.presentation.ui.backdata.EmaBackToolbarViewModel
-import es.babel.easymvvm.presentation.ui.error.EmaErrorNavigator
-import es.babel.easymvvm.presentation.ui.error.EmaErrorToolbarViewModel
-import es.babel.easymvvm.presentation.ui.home.EmaHomeNavigator
-import es.babel.easymvvm.presentation.ui.home.EmaHomeToolbarViewModel
-import es.babel.easymvvm.presentation.ui.lista.GamesListNavigator
+import es.babel.easymvvm.presentation.ui.data.GameDataNavigator
+import es.babel.easymvvm.presentation.ui.home.HomeViewModel
+import es.babel.easymvvm.presentation.ui.list.GamesListNavigator
 import org.kodein.di.Kodein
 import org.kodein.di.generic.bind
 import org.kodein.di.generic.instance
@@ -29,20 +25,12 @@ fun activityInjection(activity: Activity) = Kodein.Module(name = "ActivityModule
 
     bind<Activity>() with singleton { activity }
 
-    bind<EmaErrorToolbarViewModel>() with singleton { EmaErrorToolbarViewModel() }
-
     bind<NavController>() with singleton { (activity as EmaFragmentActivity).let { it.navController } }
-
-    bind<EmaErrorNavigator>() with singleton { EmaErrorNavigator(instance(),instance()) }
-
-    bind<EmaHomeNavigator>() with singleton { EmaHomeNavigator(instance(),instance()) }
 
     bind<GamesListNavigator>() with singleton { GamesListNavigator(instance()) }
 
-    bind<EmaBackNavigator>() with singleton { EmaBackNavigator(instance()) }
+    bind<GameDataNavigator>() with singleton { GameDataNavigator(instance()) }
 
-    bind<EmaBackToolbarViewModel>() with singleton { EmaBackToolbarViewModel() }
-
-    bind<EmaHomeToolbarViewModel>() with singleton { EmaHomeToolbarViewModel() }
+    bind<HomeViewModel>() with singleton { HomeViewModel() }
 
 }

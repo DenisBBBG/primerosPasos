@@ -38,4 +38,22 @@
     <dimen name="button_min_height_lda">30dp</dimen>
     <dimen name="stroke_width_edittext">3dp</dimen>
 
+
+    <dimen name="match_constraint">0dp</dimen>
+
+    <!-- GamesItem -->
+    <dimen name="item_parent_layout_height">150dp</dimen>
+    <dimen name="games_item_title_text_size">25sp</dimen>
+    <dimen name="games_item_parent_layout_margin_horizontal">5dp</dimen>
+    <dimen name="games_item_parent_layout_margin_top">5dp</dimen>
+    <dimen name="games_item_parent_layout_margin_bottom">10dp</dimen>
+    <dimen name="games_item_child_layout_margin_vertical">4.3dp</dimen>
+    <dimen name="games_item_background_corner_radius">4dp</dimen>
+    <dimen name="games_item_background_padding">3dp</dimen>
+
+    <!-- GamesData -->
+    <dimen name="games_data_title_text_size">35sp</dimen>
+    <dimen name="games_data_text_text_size">20sp</dimen>
+    <dimen name="games_data_text_margin_top">10dp</dimen>
+
 </resources>

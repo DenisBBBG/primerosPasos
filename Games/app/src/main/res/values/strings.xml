@@ -1,13 +1,12 @@
 <resources>
     <string name="app_name">Games</string>
-    <string name="dummy_button">Dummy Button</string>
-    <string name="dummy_content">DUMMY\nCONTENT</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="api_key">f5a3a47ff1d75c223eddb66ffa1e31e6</string>
-    <string name="sin_descripcion">Sin descripción.</string>
-    <string name="web">Página web:</string>
-    <string name="checksum">Checksum:</string>
-    <string name="search">Search</string>
-    <string name="completeURL">https:</string>
+    <!--Games Data Fragment-->
+    <string name="games_data_no_description">Sin descripción.</string>
+
+    <!--Search menu-->
+    <string name="menu_search">Search</string>
+
+    <!--Content description-->
+    <string name="games_cover_content_description">Game Cover</string>
+    <string name="games_item_frame_content_description">Frame design to item.</string>
 </resources>

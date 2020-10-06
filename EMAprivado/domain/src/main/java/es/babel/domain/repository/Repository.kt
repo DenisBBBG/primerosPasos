@@ -1,7 +1,7 @@
 package es.babel.domain.repository
 
-import es.babel.domain.model.LoginRequest
-import es.babel.domain.model.User
+import es.babel.domain.model.CoverListModel
+import es.babel.domain.model.GameModelList
 
 /**
  *  *<p>
@@ -14,5 +14,7 @@ import es.babel.domain.model.User
 
 interface Repository {
 
-    suspend fun login(loginRequest: LoginRequest): User
+    suspend fun getGames(): GameModelList
+
+    suspend fun getURLCover(id: Long): CoverListModel
 }

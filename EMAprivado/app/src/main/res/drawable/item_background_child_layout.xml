@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <gradient
+        android:angle="90"
+        android:endColor="@color/item_end_color_gradient_background"
+        android:startColor="@color/item_start_color_gradient_background" />
+
+    <corners android:radius="@dimen/games_item_background_corner_radius" />
+
+    <padding
+        android:bottom="@dimen/games_item_background_padding"
+        android:left="@dimen/games_item_background_padding"
+        android:right="@dimen/games_item_background_padding"
+        android:top="@dimen/games_item_background_padding" />
+</shape>

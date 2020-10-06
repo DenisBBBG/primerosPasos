@@ -15,59 +15,63 @@
         android:nestedScrollingEnabled="true">
 
         <ImageView
-            android:id="@+id/ivGameDataFragmentCover"
+            android:id="@+id/ivGameDataCover"
             android:layout_width="match_parent"
             android:layout_height="@dimen/match_constraint"
-            app:layout_constraintBottom_toBottomOf="@+id/glGameDataFragmentSeparator"
+            app:layout_constraintBottom_toBottomOf="@+id/glGameDataSeparator"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:src="@drawable/no_cover" />
+            tools:src="@drawable/no_cover"
+            android:contentDescription="@string/games_cover_content_description"/>
 
         <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/glGameDataFragmentSeparator"
+            android:id="@+id/glGameDataSeparator"
             android:layout_width="@dimen/match_constraint"
             android:layout_height="@dimen/match_constraint"
             android:orientation="horizontal"
             app:layout_constraintGuide_percent="0.28" />
 
         <TextView
-            android:id="@+id/tvGameDataFragmentTitle"
-            style="@style/title"
+            android:id="@+id/tvGameDataTitle"
+            style="@style/GamesDataTitle"
             android:layout_width="@dimen/match_constraint"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toTopOf="@+id/glGameDataFragmentSeparator"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/glGameDataSeparator"
             tools:text="The shadow of the tomb raider" />
 
         <TextView
-            android:id="@+id/tvGameDataFragmentSummary"
+            android:id="@+id/tvGameDataSummary"
             style="@style/GameDataText"
             android:layout_width="@dimen/match_constraint"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/tvGameDataFragmentTitle"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvGameDataTitle"
             tools:text="The shadow of the tomb raider" />
 
         <TextView
-            android:id="@+id/tvGameDataFragmentURL"
+            android:id="@+id/tvGameDataURL"
             style="@style/GameDataText"
             android:layout_width="@dimen/match_constraint"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/tvGameDataFragmentSummary"
+            android:autoLink="all"
+            android:linksClickable="true"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvGameDataSummary"
             tools:text="The shadow of the tomb raider" />
+
         <TextView
-            android:id="@+id/tvGameDataFragmentChecksum"
+            android:id="@+id/tvGameDataChecksum"
             style="@style/GameDataText"
             android:layout_width="@dimen/match_constraint"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/tvGameDataFragmentURL"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvGameDataURL"
             tools:text="The shadow of the tomb raider" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,7 +3,14 @@
     <color name="colorPrimary">#6200EE</color>
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
-    <color name="black_overlay">#66000000</color>
-    <color name="blue1">#33ACFF</color>
     <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="black_overlay">#66000000</color>
+
+    <!-- Games data colors. -->
+    <color name="game_data_text_background">#33ACFF</color>
+
+    <!-- Games item colors. -->
+    <color name="item_start_color_gradient_background">#B027ec</color>
+    <color name="item_end_color_gradient_background">#13B1ee</color>
 </resources>

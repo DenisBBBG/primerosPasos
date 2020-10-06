@@ -20,9 +20,15 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
 
+        debug {
+            it.buildConfigField "String", "BASE_URL", "\"https://api-v3.igdb.com/\""
+            it.buildConfigField "String", "USER_KEY", "\"f5a3a47ff1d75c223eddb66ffa1e31e6\""
         }
     }
+
+
 }
 
 dependencies {

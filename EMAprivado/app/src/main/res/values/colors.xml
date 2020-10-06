@@ -11,4 +11,11 @@
     <color name="grayDark">#9b9b9b</color>
     <color name="grayLight">#CDCDCD</color>
 
+    <!-- Games data colors. -->
+    <color name="game_data_text_background">#33ACFF</color>
+
+    <!-- Games item colors. -->
+    <color name="item_start_color_gradient_background">#B027ec</color>
+    <color name="item_end_color_gradient_background">#13B1ee</color>
+
 </resources>

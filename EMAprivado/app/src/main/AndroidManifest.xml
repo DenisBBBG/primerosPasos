@@ -3,6 +3,7 @@
           xmlns:tools="http://schemas.android.com/tools"
           package="es.babel.easymvvm">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
     <application
         android:name="es.babel.easymvvm.presentation.EmaSampleApplication"
         android:allowBackup="true"
@@ -13,17 +14,13 @@
         android:theme="@style/AppTheme.NoActionBar"
         tools:ignore="GoogleAppIndexingWarning">
 
-        <activity android:name="es.babel.easymvvm.presentation.ui.home.EmaHomeActivity">
+        <activity android:name="es.babel.easymvvm.presentation.ui.home.HomeActivity">
         <intent-filter>
             <action android:name="android.intent.action.MAIN"/>
 
             <category android:name="android.intent.category.LAUNCHER"/>
         </intent-filter>
         </activity>
-        <activity
-            android:name=".presentation.ui.error.EmaErrorToolbarViewActivity"
-            android:launchMode="singleInstance" />
-        <activity android:name=".presentation.ui.backdata.EmaBackToolbarActivity" />
     </application>
 
 </manifest>

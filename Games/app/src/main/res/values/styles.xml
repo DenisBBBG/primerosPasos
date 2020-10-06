@@ -7,17 +7,27 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <style name="title">
+    <!-- Games styles. -->
+    <style name="GamesTitle">
         <item name="android:gravity">center</item>
-        <item name="android:textSize">30sp</item>
-        <item name="color">@color/white</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <!-- Games item styles. -->
+    <style name="GamesItemTitle" parent="GamesTitle">
+        <item name="android:textSize">@dimen/games_item_title_text_size</item>
+    </style>
+
+    <!-- Games data styles. -->
+    <style name="GamesDataTitle" parent="GamesTitle">
+        <item name="android:textSize">@dimen/games_data_title_text_size</item>
     </style>
 
     <style name="GameDataText">
         <item name="android:gravity">center</item>
-        <item name="android:layout_marginTop">10dp</item>
-        <item name="android:background">@color/blue1</item>
-        <item name="android:textSize">20sp</item>
+        <item name="android:layout_marginTop">@dimen/games_data_text_margin_top</item>
+        <item name="android:background">@color/game_data_text_background</item>
+        <item name="android:textSize">@dimen/games_data_text_text_size</item>
     </style>
 
 </resources>

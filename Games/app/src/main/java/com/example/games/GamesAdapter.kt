@@ -8,10 +8,13 @@ import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.item.view.*
 
 
-class GamesAdapter(private val allGames: List<Game>, private val listener: (Game) -> Unit) :
+class GamesAdapter(
+    private val allGameModels: List<GameModel>,
+    private val listener: (GameModel) -> Unit
+) :
     RecyclerView.Adapter<GamesViewHolder>() {
 
-    private var games = allGames
+    private var games = allGameModels
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): GamesViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item, parent, false)
@@ -23,11 +26,8 @@ class GamesAdapter(private val allGames: List<Game>, private val listener: (Game
     override fun onBindViewHolder(holder: GamesViewHolder, position: Int) =
         holder.bind(games[position])
 
-
     fun filterGames(filter: String) {
-        games = allGames
-        ////////////////revisar
-        games = games.filter { game ->
+        games = allGameModels.filter { game ->
             game.title?.contains(filter, ignoreCase = true) ?: false
         }
         notifyDataSetChanged()
@@ -35,18 +35,19 @@ class GamesAdapter(private val allGames: List<Game>, private val listener: (Game
 
 }
 
-class GamesViewHolder(itemView: View, private val listener: (Game) -> Unit) :
+class GamesViewHolder(itemView: View, private val listener: (GameModel) -> Unit) :
     RecyclerView.ViewHolder(itemView) {
 
-    fun bind(game: Game) {
-        itemView.tvItemTitle.text = game.title
-
-        game.cover?.let { cover ->
+    fun bind(gameModel: GameModel) {
+        itemView.tvItemTitle.text = gameModel.title
+        gameModel.cover?.let { cover ->
             Glide.with(itemView).load(cover).into(itemView.ivItemCover)
         } ?: Glide.with(itemView).load(R.drawable.no_cover).into(itemView.ivItemCover)
 
+        itemView.ivItemFrame.setImageResource(R.drawable.item_frame)
+
         itemView.setOnClickListener {
-            listener.invoke(game)
+            listener.invoke(gameModel)
         }
 
     }
