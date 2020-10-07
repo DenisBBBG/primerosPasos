@@ -4,7 +4,6 @@ import es.babel.domain.model.GameModelList
 import es.babel.domain.repository.Repository
 import es.babel.easymvvm.core.usecase.EmaUseCase
 
-
 /**
  * Login
  *

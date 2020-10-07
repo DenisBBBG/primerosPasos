@@ -9,11 +9,14 @@ import kotlinx.android.synthetic.main.fragment_game_data.*
 import org.kodein.di.generic.instance
 
 class GameDataFragment : BaseFragment<GameDataState, GameDataViewModel, GameDataNavigator.Navigation>() {
-
     private lateinit var viewModel: GameDataViewModel
+
     override val layoutId: Int = R.layout.fragment_game_data
+
     override val viewModelSeed: GameDataViewModel by instance()
+
     override val navigator: EmaBaseNavigator<GameDataNavigator.Navigation>? by instance()
+
     override fun onNormal(data: GameDataState) {
 
         data.game?.let {

@@ -6,16 +6,15 @@ import es.babel.easymvvm.presentation.base.BaseViewModel
 import es.babel.easymvvm.presentation.ui.data.GameDataState
 
 class GamesListViewModel(private val getGamesUseCase: GetGamesUseCase) : BaseViewModel<GamesListState, GamesListNavigator.Navigation>() {
-
     override val initialViewState: GamesListState = GamesListState()
 
     private lateinit var fullGameList: List<GameModel>
 
     override fun onStartFirstTime(statePreloaded: Boolean) {
         refreshGameList()
-//Llamar al servicio
 
-/*Actualiza datos sin llamar a la vista, es decir que los cambios no se verian en pantalla
+/*Llamar al servicio
+Actualiza datos sin llamar a la vista, es decir que los cambios no se verian en pantalla
 updateDataState {
      }
 
@@ -47,9 +46,12 @@ updateToNormalState {
 
     fun refreshGameList() {
         updateToAlternativeState()
+
         executeUseCaseWithException({
             val gameList = getGamesUseCase.execute(Unit)
+
             fullGameList = gameList
+
             updateToNormalState {
                 copy(
                         gameList = gameList

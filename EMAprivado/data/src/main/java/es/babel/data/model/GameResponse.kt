@@ -10,7 +10,6 @@ fun GameResponse.toDomainModel() = this.map {
 }
 */
 
-
 data class GameResponseItem(
         @SerializedName("id")
         val id: Long,

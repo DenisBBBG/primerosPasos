@@ -9,6 +9,7 @@ import es.babel.easymvvm.presentation.dialog.loading.LoadingDialogProvider
 import es.babel.easymvvm.presentation.dialog.simple.SimpleDialogProvider
 import es.babel.easymvvm.presentation.ui.data.GameDataViewModel
 import es.babel.easymvvm.presentation.ui.list.GamesListViewModel
+import es.babel.easymvvm.presentation.ui.totalGames.TotalGamesViewModel
 import org.kodein.di.Kodein
 import org.kodein.di.generic.bind
 import org.kodein.di.generic.instance
@@ -38,5 +39,7 @@ fun fragmentInjection(fragment: Fragment) = Kodein.Module(name = "FragmentModule
     bind<GamesListViewModel>() with singleton { GamesListViewModel(instance()) }
 
     bind<GameDataViewModel>() with singleton { GameDataViewModel() }
+
+    bind<TotalGamesViewModel>() with singleton { TotalGamesViewModel() }
 
 }

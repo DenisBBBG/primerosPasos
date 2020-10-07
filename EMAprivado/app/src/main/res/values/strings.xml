@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <!--Games Data Fragment-->
     <string name="games_data_no_description" translatable="false">Sin descripción.</string>
@@ -12,6 +12,7 @@
     <string name="games_list_example_dialog_button" translatable="false">Simple dialog example</string>
     <string name="loading_game_list_dialog_title" translatable="false">Loading games</string>
     <string name="example_game_list_dialog_title" translatable="false">Example of simple dialog.</string>
-    <string name="example_game_list_dialog_accept" translatable="false">ACCEPT</string>
-    <string name="example_game_list_dialog_cancel" translatable="false">CANCEL</string>
+    <string name="example_game_list_dialog_accept" translatable="false">Accept</string>
+    <string name="example_game_list_dialog_cancel" translatable="false">Cancel</string>
+    <string name="total_games_button_dialog" translatable="false">How many games are there?</string>
 </resources>

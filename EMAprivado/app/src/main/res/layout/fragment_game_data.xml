@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     android:fillViewport="true">
 
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -17,12 +16,12 @@
             android:id="@+id/ivGameDataCover"
             android:layout_width="match_parent"
             android:layout_height="@dimen/match_constraint"
+            android:contentDescription="@string/games_cover_content_description"
             app:layout_constraintBottom_toBottomOf="@+id/glGameDataSeparator"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:src="@drawable/no_cover"
-            android:contentDescription="@string/games_cover_content_description"/>
+            tools:src="@drawable/no_cover" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/glGameDataSeparator"
@@ -74,5 +73,4 @@
             tools:text="The shadow of the tomb raider" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 </ScrollView>

@@ -6,6 +6,7 @@ import es.babel.easymvvm.android.ui.EmaFragmentActivity
 import es.babel.easymvvm.presentation.ui.data.GameDataNavigator
 import es.babel.easymvvm.presentation.ui.home.HomeViewModel
 import es.babel.easymvvm.presentation.ui.list.GamesListNavigator
+import es.babel.easymvvm.presentation.ui.totalGames.TotalGamesNavigator
 import org.kodein.di.Kodein
 import org.kodein.di.generic.bind
 import org.kodein.di.generic.instance
@@ -30,6 +31,8 @@ fun activityInjection(activity: Activity) = Kodein.Module(name = "ActivityModule
     bind<GamesListNavigator>() with singleton { GamesListNavigator(instance()) }
 
     bind<GameDataNavigator>() with singleton { GameDataNavigator(instance()) }
+
+    bind<TotalGamesNavigator>() with singleton { TotalGamesNavigator(instance()) }
 
     bind<HomeViewModel>() with singleton { HomeViewModel() }
 

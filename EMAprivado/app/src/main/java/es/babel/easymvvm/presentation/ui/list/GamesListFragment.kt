@@ -17,7 +17,7 @@ import kotlinx.android.synthetic.main.fragment_games_list.*
 import org.kodein.di.generic.instance
 
 class GamesListFragment : BaseFragment<GamesListState, GamesListViewModel, GamesListNavigator.Navigation>() {
-    override val layoutId: Int = es.babel.easymvvm.R.layout.fragment_games_list
+    override val layoutId: Int = R.layout.fragment_games_list
 
     override val viewModelSeed: GamesListViewModel by instance()
 
@@ -52,8 +52,7 @@ class GamesListFragment : BaseFragment<GamesListState, GamesListViewModel, Games
     override fun onInitialized(viewModel: GamesListViewModel) {
         //OnViewCreated , (al arrancar el fragmento)
         this.viewModel = viewModel
-        rvFragmentHomeGames.layoutManager =
-                LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
+        rvFragmentHomeGames.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
 
         etGameListSearch.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(s: Editable?) {

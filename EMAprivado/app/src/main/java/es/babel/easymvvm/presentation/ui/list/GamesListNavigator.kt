@@ -17,32 +17,8 @@ class GamesListNavigator(override val navController: NavController) : EmaNavigat
             }
         }
     }
+
     fun toGameData(state: GameDataState) {
         navigateWithAction(R.id.navGraphAction_fragmentHome_to_gameData, addInputState(state))
     }
 }
-
-
-/*
-
-class TelemedicineNavigator(
-    override val navController: NavController
-) :
-    EmaNavigator<TelemedicineNavigator.Navigation> {
-    sealed class Navigation : EmaNavigationState {
-        class WaitingRoom(private val state: WaitingRoomViewState) : TelemedicineNavigator.Navigation() {
-            override fun navigateWith(navigator: EmaBaseNavigator<out EmaNavigationState>) {
-                val nav = navigator as TelemedicineNavigator
-                nav.toWaitingRoom(state)
-            }
-        }
-    }
-    fun toWaitingRoom(state: WaitingRoomViewState) {
-        navigateWithAction(R.id.action_telemedicineViewFragment_to_waitingRoomViewFragment, addInputState(state))
-    }
-}
-
-
-
-
- */

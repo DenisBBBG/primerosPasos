@@ -23,7 +23,6 @@
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.03" />
 
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="@dimen/match_constraint"
         android:layout_height="@dimen/match_constraint"
@@ -72,4 +71,5 @@
         android:layout_height="@dimen/match_constraint"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.97" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

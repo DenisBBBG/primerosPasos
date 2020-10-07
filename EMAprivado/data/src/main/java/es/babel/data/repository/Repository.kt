@@ -1,13 +1,11 @@
 package es.babel.data.repository
 
-import es.babel.data.model.CoverResponse
 import es.babel.data.model.toDomainModel
 import es.babel.data.net.Api
 import es.babel.data.net.ServiceBuilder
 import es.babel.domain.model.CoverListModel
 import es.babel.domain.model.GameModel
 import es.babel.domain.repository.Repository
-
 
 /**
  *  *<p>
@@ -20,8 +18,7 @@ import es.babel.domain.repository.Repository
  */
 class Repository : Repository {
 
-    private val api: Api =
-            ServiceBuilder.getServiceBuilder().create(Api::class.java)
+    private val api: Api = ServiceBuilder.getServiceBuilder().create(Api::class.java)
 
     companion object {
         const val COMPLETE_URL = "https:"
