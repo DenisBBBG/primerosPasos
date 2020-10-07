@@ -14,7 +14,7 @@
         android:layout_height="match_parent"
         android:contentDescription="@string/games_item_frame_content_description"
         android:scaleType="fitXY"
-        tools:src="@drawable/item_frame" />
+        android:src="@drawable/item_frame" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/glItemLeftSeparator"

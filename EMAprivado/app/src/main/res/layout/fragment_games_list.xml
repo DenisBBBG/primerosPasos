@@ -7,13 +7,47 @@
     android:background="@color/black"
     tools:context="es.babel.easymvvm.presentation.ui.list.GamesListFragment">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvFragmentHomeGames"
+    <EditText
+        android:id="@+id/etGameListSearch"
+        style="@style/GameSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/game_list_search_tv"
+        app:layout_constraintBottom_toTopOf="@id/btnGameListExampleDialog"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnGameListExampleDialog"
+        android:layout_width="@dimen/match_constraint"
+        android:layout_height="wrap_content"
+        android:text="@string/games_list_example_dialog_button"
+        app:layout_constraintBottom_toTopOf="@id/srlGamesList"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etGameListSearch" />
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/srlGamesList"
         android:layout_width="@dimen/match_constraint"
         android:layout_height="@dimen/match_constraint"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:listitem="@layout/item_games_list" />
+        app:layout_constraintTop_toBottomOf="@id/btnGameListExampleDialog">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvFragmentHomeGames"
+            android:layout_width="@dimen/match_constraint"
+            android:layout_height="@dimen/match_constraint"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="parent"
+            tools:listitem="@layout/item_games_list" />
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

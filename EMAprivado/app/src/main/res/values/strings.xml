@@ -3,10 +3,15 @@
     <!--Games Data Fragment-->
     <string name="games_data_no_description" translatable="false">Sin descripción.</string>
 
-    <!--Search menu-->
-    <string name="menu_search" translatable="false">Search</string>
+    <!--List search-->
+    <string name="game_list_search_tv" translatable="false">Search</string>
 
     <!--Content description-->
     <string name="games_cover_content_description" translatable="false">Game Cover</string>
     <string name="games_item_frame_content_description" translatable="false">Frame design to item.</string>
+    <string name="games_list_example_dialog_button" translatable="false">Simple dialog example</string>
+    <string name="loading_game_list_dialog_title" translatable="false">Loading games</string>
+    <string name="example_game_list_dialog_title" translatable="false">Example of simple dialog.</string>
+    <string name="example_game_list_dialog_accept" translatable="false">ACCEPT</string>
+    <string name="example_game_list_dialog_cancel" translatable="false">CANCEL</string>
 </resources>

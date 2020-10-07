@@ -5,42 +5,26 @@ import es.babel.domain.usecase.GetGamesUseCase
 import es.babel.easymvvm.presentation.base.BaseViewModel
 import es.babel.easymvvm.presentation.ui.data.GameDataState
 
-
 class GamesListViewModel(private val getGamesUseCase: GetGamesUseCase) : BaseViewModel<GamesListState, GamesListNavigator.Navigation>() {
-
-    companion object {
-        const val COMPLETE_URL = "https:"
-    }
 
     override val initialViewState: GamesListState = GamesListState()
 
+    private lateinit var fullGameList: List<GameModel>
+
     override fun onStartFirstTime(statePreloaded: Boolean) {
+        refreshGameList()
+//Llamar al servicio
 
-        executeUseCaseWithException({
-            val gameList = getGamesUseCase.execute(Unit)
+/*Actualiza datos sin llamar a la vista, es decir que los cambios no se verian en pantalla
+updateDataState {
+     }
 
-            updateToNormalState {
-                copy(
-                        gameList = gameList
-                )
-            }
-
-        }, { error ->
-            updateToErrorState(error)
-
-        })
-        //Llamar al servicio
-
-        /*Actualiza datos sin llamar a la vista, es decir que los cambios no se verian en pantalla
-        updateDataState {
-             }
-
-        Actualiza los datos igual que la funcion anterior pero tambien actualiza la vista
-        updateToNormalState {
-            copy(/aqui se ponen variables que queremos actualizar/)
-            actualizar variable del estado con lo que me evuelve el servicio
-        }
-         */
+Actualiza los datos igual que la funcion anterior pero tambien actualiza la vista
+updateToNormalState {
+    copy(/aqui se ponen variables que queremos actualizar/)
+    actualizar variable del estado con lo que me evuelve el servicio
+}
+ */
     }
 
     fun onGameItemClick(game: GameModel) {
@@ -49,6 +33,38 @@ class GamesListViewModel(private val getGamesUseCase: GetGamesUseCase) : BaseVie
                         GameDataState(game)
                 )
         )
+    }
 
+    fun filterGames(filter: String) {
+        updateToNormalState {
+            copy(
+                    gameList = fullGameList.filter { game ->
+                        game.title?.contains(filter, ignoreCase = true) ?: false
+                    }
+            )
+        }
+    }
+
+    fun refreshGameList() {
+        updateToAlternativeState()
+        executeUseCaseWithException({
+            val gameList = getGamesUseCase.execute(Unit)
+            fullGameList = gameList
+            updateToNormalState {
+                copy(
+                        gameList = gameList
+                )
+            }
+        }, { error ->
+            updateToErrorState(error)
+        })
+    }
+
+    fun onCancelExampleDialog() {
+        updateToNormalState()
+    }
+
+    fun onConfirmExampleDialog() {
+        updateToNormalState()
     }
 }

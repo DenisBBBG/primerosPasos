@@ -1,60 +1,42 @@
 package es.babel.easymvvm.presentation.ui.list
 
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
-import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import es.babel.domain.model.GameModel
 import es.babel.easymvvm.R
+import es.babel.easymvvm.android.ui.EmaRecyclerAdapter
 import kotlinx.android.synthetic.main.item_games_list.view.*
 
 
-class GamesAdapter(
-        private val allGameModels: List<GameModel>,
-        private val viewModel: GamesListViewModel
-) :
-        RecyclerView.Adapter<GamesViewHolder>() {
+class GamesAdapter(private val viewModel: GamesListViewModel, override val listItems: MutableList<GameModel>
+) : EmaRecyclerAdapter<GameModel>() {
 
-    private var games = allGameModels
-
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): GamesViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_games_list, parent, false)
-        return GamesViewHolder(view, viewModel)
-    }
-
+    private var games: List<GameModel> = listItems
+    override val layoutItemId: Int? = R.layout.item_games_list
     override fun getItemCount() = games.size
 
-    override fun onBindViewHolder(holder: GamesViewHolder, position: Int) =
-            holder.bind(games[position])
+    override fun View.bind(item: GameModel, viewType: Int) {
+        tvItemTitle.text = item.title
+        item.cover?.let { cover ->
+            Glide.with(this).load(cover).into(ivItemCover)
+        } ?: Glide.with(this).load(R.drawable.no_cover).into(ivItemCover)
 
-    fun filterGames(filter: String) {
-        games = allGameModels.filter { game ->
-            game.title?.contains(filter, ignoreCase = true) ?: false
+        setOnClickListener {
+            viewModel.onGameItemClick(item)
         }
-        notifyDataSetChanged()
     }
-
 }
 
-class GamesViewHolder(itemView: View, private val viewModel: GamesListViewModel) :
-        RecyclerView.ViewHolder(itemView) {
+/*
+busqueda por un editText con textWatcher(desde el fragmento)
 
-    fun bind(gameModel: GameModel) {
-        itemView.tvItemTitle.text = gameModel.title
-        gameModel.cover?.let { cover ->
-            Glide.with(itemView).load(cover).into(itemView.ivItemCover)
-        } ?: Glide.with(itemView).load(R.drawable.no_cover).into(itemView.ivItemCover)
+se añaden 3 metodos que se sobreescriben (object)
 
-        itemView.ivItemFrame.setImageResource(R.drawable.item_frame)
+cuando cambia el texto se llamaa a una funcion del viewModel
 
-        itemView.setOnClickListener {
-            viewModel.onGameItemClick(gameModel)
-        }
-
-    }
+viewModel actualiza la variable del estado(String con el texto de busqueda)
 
 
-}
 
 
+ */

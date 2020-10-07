@@ -15,6 +15,7 @@ class LoadingDialog : EmaBaseDialog<LoadingDialogData>() {
 
     override val layoutId: Int = R.layout.dialog_loading
 
+    //Al inicializar el dialogo se carga esta funcion
     override fun setupData(data: LoadingDialogData, view: View) {
         view.tvDialogLoadingTitle.text = data.title
 
