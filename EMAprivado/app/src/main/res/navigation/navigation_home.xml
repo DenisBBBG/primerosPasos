@@ -13,11 +13,18 @@
         <action
             android:id="@+id/navGraphAction_fragmentHome_to_gameData"
             app:destination="@id/gameDataFragment" />
+        <action
+            android:id="@+id/action_gamesListFragment_to_totalGamesFragment"
+            app:destination="@id/totalGamesFragment" />
     </fragment>
     <fragment
         android:id="@+id/gameDataFragment"
         android:name="es.babel.easymvvm.presentation.ui.data.GameDataFragment"
         tools:layout="@layout/fragment_game_data" />
+    <fragment
+        android:id="@+id/totalGamesFragment"
+        android:name="es.babel.easymvvm.presentation.ui.totalGames.TotalGamesFragment"
+        tools:layout="@layout/total_games" />
 
 
 </navigation>

@@ -45,5 +45,4 @@ fun fragmentInjection(fragment: Fragment) = Kodein.Module(name = "FragmentModule
     bind<GameDataViewModel>() with singleton { GameDataViewModel() }
 
     bind<TotalGamesViewModel>() with singleton { TotalGamesViewModel() }
-
 }
