@@ -10,3 +10,4 @@ package es.babel.easymvvm.presentation
 
 const val DIALOG_TAG_LOADING = "LOADING"
 const val DIALOG_TAG_SIMPLE = "SIMPLE"
+const val DIALOG_TAG_TOTAL_GAMES = "TOTAL GAMES"

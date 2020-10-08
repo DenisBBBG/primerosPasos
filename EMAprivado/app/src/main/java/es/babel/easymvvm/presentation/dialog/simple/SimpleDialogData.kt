@@ -3,7 +3,6 @@ package es.babel.easymvvm.presentation.dialog.simple
 import android.graphics.drawable.Drawable
 import es.babel.easymvvm.core.dialog.EmaDialogData
 
-
 /**
  *  *<p>
  * Copyright (c) 2020, Babel Sistemas de Información. All rights reserved.
