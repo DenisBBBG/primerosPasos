@@ -13,6 +13,7 @@ import es.babel.easymvvm.presentation.base.BaseFragment
 import es.babel.easymvvm.presentation.dialog.loading.LoadingDialogData
 import es.babel.easymvvm.presentation.dialog.simple.SimpleDialogData
 import es.babel.easymvvm.presentation.dialog.simple.SimpleDialogListener
+import es.babel.easymvvm.presentation.ui.list.GamesListViewModel.Companion.SIMPLE_DIALOG
 import kotlinx.android.synthetic.main.fragment_games_list.*
 import org.kodein.di.generic.instance
 
@@ -40,7 +41,29 @@ class GamesListFragment : BaseFragment<GamesListState, GamesListViewModel, Games
     }
 
     override fun onAlternative(data: EmaExtraData) {
-        loadingDialog.show(LoadingDialogData(title = getString(R.string.loading_game_list_dialog_title)))
+        when (data.type) {
+            SIMPLE_DIALOG -> {
+                navigateTotalGamesDialog.show(SimpleDialogData(
+                        title = getString(R.string.simple_game_list_dialog_title),
+                        accept = getString(R.string.simple_game_list_dialog_accept),
+                        cancel = getString(R.string.simple_game_list_dialog_cancel)))
+
+                navigateTotalGamesDialog.dialogListener = object : SimpleDialogListener {
+                    override fun onCancelClicked() {
+                        viewModel.onCancelDialogToTotalGames()
+                    }
+
+                    override fun onConfirmClicked() {
+                        viewModel.onConfirmDialogToTotalGames("56456")
+                    }
+
+                    override fun onBackPressed() {
+                        viewModel.onCancelDialogToTotalGames()
+                    }
+                }
+            }
+            else -> loadingDialog.show(LoadingDialogData(title = getString(R.string.loading_game_list_dialog_title)))
+        }
     }
 
     override fun onSingle(data: EmaExtraData) {
@@ -72,25 +95,7 @@ class GamesListFragment : BaseFragment<GamesListState, GamesListViewModel, Games
         }
 
         btnGameListSimpleDialogToTotalGames.setOnClickListener {
-            navigateTotalGamesDialog.show(SimpleDialogData(
-                    title = getString(R.string.simple_game_list_dialog_title),
-                    accept = getString(R.string.simple_game_list_dialog_accept),
-                    cancel = getString(R.string.simple_game_list_dialog_cancel)))
-
-            navigateTotalGamesDialog.dialogListener = object : SimpleDialogListener {
-                override fun onCancelClicked() {
-                    viewModel.onCancelDialogToTotalGames()
-                }
-
-                override fun onConfirmClicked() {
-                    viewModel.onConfirmDialogToTotalGames("56456")
-                    navigateTotalGamesDialog.hide()
-                }
-
-                override fun onBackPressed() {
-                    viewModel.onCancelDialogToTotalGames()
-                }
-            }
+            viewModel.onSimpleDialogShow()
         }
     }
 }

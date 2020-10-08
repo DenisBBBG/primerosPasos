@@ -2,6 +2,7 @@ package es.babel.easymvvm.presentation.ui.list
 
 import es.babel.domain.model.GameModel
 import es.babel.domain.usecase.GetGamesUseCase
+import es.babel.easymvvm.core.state.EmaExtraData
 import es.babel.easymvvm.presentation.base.BaseViewModel
 import es.babel.easymvvm.presentation.ui.data.GameDataState
 import es.babel.easymvvm.presentation.ui.totalGames.TotalGamesState
@@ -10,6 +11,10 @@ class GamesListViewModel(private val getGamesUseCase: GetGamesUseCase) : BaseVie
     override val initialViewState: GamesListState = GamesListState()
 
     private lateinit var fullGameList: List<GameModel>
+
+    companion object{
+        const val SIMPLE_DIALOG = 1
+    }
 
     override fun onStartFirstTime(statePreloaded: Boolean) {
         refreshGameList()
@@ -68,10 +73,16 @@ updateToNormalState {
     }
 
     fun onConfirmDialogToTotalGames(totalGames: String) {
+        updateToNormalState()
         navigate(
                 GamesListNavigator.Navigation.TotalGames(
                         TotalGamesState(totalGames)
                 )
         )
+    }
+
+    fun onSimpleDialogShow(){
+        updateToAlternativeState(EmaExtraData(SIMPLE_DIALOG))
+
     }
 }
