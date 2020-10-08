@@ -15,4 +15,6 @@
     <string name="simple_game_list_dialog_accept" translatable="false">Accept</string>
     <string name="simple_game_list_dialog_cancel" translatable="false">Cancel</string>
     <string name="total_games_button_dialog" translatable="false">How many games are there?</string>
+    <string name="total_games_dialog_title" translatable="false">Successful search!</string>
+    <string name="total_games_dialog_message" translatable="false">In this moment the number of games in the API is:</string>
 </resources>
