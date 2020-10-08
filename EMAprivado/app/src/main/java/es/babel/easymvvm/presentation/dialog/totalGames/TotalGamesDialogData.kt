@@ -1,8 +1,8 @@
-package es.babel.easymvvm.presentation.dialog.simpleTotalGames
+package es.babel.easymvvm.presentation.dialog.totalGames
 
 import es.babel.easymvvm.core.dialog.EmaDialogData
 
-data class SimpleTotalGamesDialogData (
+data class TotalGamesDialogData (
     val title: String = "",
     val message: String = "",
     val info: String = "",

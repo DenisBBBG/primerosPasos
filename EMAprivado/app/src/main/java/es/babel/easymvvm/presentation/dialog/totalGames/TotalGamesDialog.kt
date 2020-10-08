@@ -1,15 +1,15 @@
-package es.babel.easymvvm.presentation.dialog.simpleTotalGames
+package es.babel.easymvvm.presentation.dialog.totalGames
 
 import android.view.View
 import es.babel.easymvvm.android.ui.dialog.EmaBaseDialog
 import es.babel.easymvvm.presentation.dialog.simple.SimpleDialogListener
 import kotlinx.android.synthetic.main.dialog_simple.view.*
-import kotlinx.android.synthetic.main.dialog_simple_total_games.view.*
+import kotlinx.android.synthetic.main.dialog_total_games.view.*
 
-class SimpleTotalGamesDialog() : EmaBaseDialog<SimpleTotalGamesDialogData>() {
-    override val layoutId: Int = es.babel.easymvvm.R.layout.dialog_simple_total_games
+class TotalGamesDialog() : EmaBaseDialog<TotalGamesDialogData>() {
+    override val layoutId: Int = es.babel.easymvvm.R.layout.dialog_total_games
 
-    override fun setupData(data: SimpleTotalGamesDialogData, view: View) {
+    override fun setupData(data: TotalGamesDialogData, view: View) {
         with(data) {
             (dialogListener as? SimpleDialogListener)?.let { listener ->
                 view.bDialogSimpleNo.setOnClickListener { listener.onCancelClicked() }
