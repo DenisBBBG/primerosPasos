@@ -5,6 +5,7 @@ import androidx.fragment.app.FragmentManager
 import es.babel.easymvvm.android.ui.dialog.EmaBaseDialogProvider
 import es.babel.easymvvm.presentation.DIALOG_TAG_LOADING
 import es.babel.easymvvm.presentation.DIALOG_TAG_SIMPLE
+import es.babel.easymvvm.presentation.DIALOG_TAG_TOTAL_GAMES
 import es.babel.easymvvm.presentation.dialog.loading.LoadingDialogProvider
 import es.babel.easymvvm.presentation.dialog.simple.SimpleDialogProvider
 import es.babel.easymvvm.presentation.dialog.totalGames.TotalGamesDialogProvider
@@ -37,7 +38,7 @@ fun fragmentInjection(fragment: Fragment) = Kodein.Module(name = "FragmentModule
 
     bind<EmaBaseDialogProvider>(tag = DIALOG_TAG_LOADING) with provider { LoadingDialogProvider(instance()) }
 
-    bind<EmaBaseDialogProvider>(tag = DIALOG_TAG_SIMPLE) with provider { TotalGamesDialogProvider(instance()) }
+    bind<EmaBaseDialogProvider>(tag = DIALOG_TAG_TOTAL_GAMES) with provider { TotalGamesDialogProvider(instance()) }
 
     bind<GamesListViewModel>() with singleton { GamesListViewModel(instance()) }
 
