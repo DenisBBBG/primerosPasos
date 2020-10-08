@@ -56,4 +56,8 @@
     <dimen name="games_data_text_text_size">20sp</dimen>
     <dimen name="games_data_text_margin_top">10dp</dimen>
 
+    <!-- Total games dialog -->
+    <dimen name="dialog_total_games_top_text_separation">20dp</dimen>
+    <dimen name="dialog_total_games_button_margin">1dp</dimen>
+
 </resources>

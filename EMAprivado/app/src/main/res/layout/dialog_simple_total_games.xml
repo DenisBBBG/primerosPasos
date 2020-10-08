@@ -20,13 +20,13 @@
         android:id="@+id/tvSimpleTotalGamesDialogMessage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dialog_total_games_top_text_separation"
         android:gravity="center"
-        android:layout_marginTop="20dp"
         app:layout_constraintBottom_toTopOf="@id/tvSimpleTotalGamesDialogInfo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvSimpleTotalGamesDialogTitle"
-        tools:text="DESCRIPTION" />
+        tools:text="MESSAGE" />
 
     <TextView
         android:id="@+id/tvSimpleTotalGamesDialogInfo"
@@ -43,7 +43,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/space_very_big"
-        android:layout_marginBottom="1dp"
+        android:layout_marginBottom="@dimen/dialog_total_games_button_margin"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/btnSimpleTotalGamesDialogYes"
         app:layout_constraintHorizontal_bias="0.5"
@@ -58,7 +58,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/space_very_big"
-        android:layout_marginBottom="1dp"
+        android:layout_marginBottom="@dimen/dialog_total_games_button_margin"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
