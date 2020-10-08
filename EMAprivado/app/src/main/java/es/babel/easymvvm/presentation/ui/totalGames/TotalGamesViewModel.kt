@@ -7,4 +7,12 @@ class TotalGamesViewModel() : BaseViewModel<TotalGamesState, TotalGamesNavigator
 
     override fun onStartFirstTime(statePreloaded: Boolean) {
     }
+
+    fun onCancelDialogTotalGames() {
+        updateToNormalState()
+    }
+
+    fun onConfirmDialogTotalGames() {
+        navigateBack()
+    }
 }
