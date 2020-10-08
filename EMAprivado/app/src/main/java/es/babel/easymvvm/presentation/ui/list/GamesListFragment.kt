@@ -71,7 +71,7 @@ class GamesListFragment : BaseFragment<GamesListState, GamesListViewModel, Games
             srlGamesList.isRefreshing = false
         }
 
-        btnGameListExampleDialog.setOnClickListener {
+        btnGameListSimpleDialogToTotalGames.setOnClickListener {
             exampleDialog.show(SimpleDialogData(
                     title = getString(R.string.example_game_list_dialog_title),
                     accept = getString(R.string.example_game_list_dialog_accept),

@@ -13,16 +13,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/game_list_search_tv"
-        app:layout_constraintBottom_toTopOf="@id/btnGameListExampleDialog"
+        app:layout_constraintBottom_toTopOf="@id/btnGameListSimpleDialogToTotalGames"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btnGameListExampleDialog"
+        android:id="@+id/btnGameListSimpleDialogToTotalGames"
         android:layout_width="@dimen/match_constraint"
         android:layout_height="wrap_content"
-        android:text="@string/games_list_example_dialog_button"
+        android:text="@string/games_list_simple_dialog_button_to_total_games"
         app:layout_constraintBottom_toTopOf="@id/srlGamesList"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -35,7 +35,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btnGameListExampleDialog">
+        app:layout_constraintTop_toBottomOf="@id/btnGameListSimpleDialogToTotalGames">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvFragmentHomeGames"
