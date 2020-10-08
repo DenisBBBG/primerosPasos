@@ -9,10 +9,10 @@
     <!--Content description-->
     <string name="games_cover_content_description" translatable="false">Game Cover</string>
     <string name="games_item_frame_content_description" translatable="false">Frame design to item.</string>
-    <string name="games_list_example_dialog_button" translatable="false">Simple dialog example</string>
+    <string name="games_list_simple_dialog_button_to_total_games" translatable="false">Go to total games</string>
     <string name="loading_game_list_dialog_title" translatable="false">Loading games</string>
-    <string name="example_game_list_dialog_title" translatable="false">Example of simple dialog.</string>
-    <string name="example_game_list_dialog_accept" translatable="false">Accept</string>
-    <string name="example_game_list_dialog_cancel" translatable="false">Cancel</string>
+    <string name="simple_game_list_dialog_title" translatable="false">Do you want to know how many games are in the API?</string>
+    <string name="simple_game_list_dialog_accept" translatable="false">Accept</string>
+    <string name="simple_game_list_dialog_cancel" translatable="false">Cancel</string>
     <string name="total_games_button_dialog" translatable="false">How many games are there?</string>
 </resources>

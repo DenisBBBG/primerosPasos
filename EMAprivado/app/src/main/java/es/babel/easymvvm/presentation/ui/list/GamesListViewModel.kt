@@ -4,6 +4,7 @@ import es.babel.domain.model.GameModel
 import es.babel.domain.usecase.GetGamesUseCase
 import es.babel.easymvvm.presentation.base.BaseViewModel
 import es.babel.easymvvm.presentation.ui.data.GameDataState
+import es.babel.easymvvm.presentation.ui.totalGames.TotalGamesState
 
 class GamesListViewModel(private val getGamesUseCase: GetGamesUseCase) : BaseViewModel<GamesListState, GamesListNavigator.Navigation>() {
     override val initialViewState: GamesListState = GamesListState()
@@ -62,11 +63,15 @@ updateToNormalState {
         })
     }
 
-    fun onCancelExampleDialog() {
+    fun onCancelDialogToTotalGames() {
         updateToNormalState()
     }
 
-    fun onConfirmExampleDialog() {
-        updateToNormalState()
+    fun onConfirmDialogToTotalGames(totalGames: String) {
+        navigate(
+                GamesListNavigator.Navigation.TotalGames(
+                        TotalGamesState(totalGames)
+                )
+        )
     }
 }

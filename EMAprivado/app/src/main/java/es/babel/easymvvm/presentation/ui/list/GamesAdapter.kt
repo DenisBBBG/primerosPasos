@@ -7,7 +7,6 @@ import es.babel.easymvvm.R
 import es.babel.easymvvm.android.ui.EmaRecyclerAdapter
 import kotlinx.android.synthetic.main.item_games_list.view.*
 
-
 class GamesAdapter(private val viewModel: GamesListViewModel, override val listItems: MutableList<GameModel>
 ) : EmaRecyclerAdapter<GameModel>() {
     private var games: List<GameModel> = listItems

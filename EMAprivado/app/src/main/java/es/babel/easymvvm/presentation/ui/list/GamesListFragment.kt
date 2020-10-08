@@ -27,7 +27,7 @@ class GamesListFragment : BaseFragment<GamesListState, GamesListViewModel, Games
 
     private val loadingDialog: EmaDialogProvider by instance(tag = DIALOG_TAG_LOADING)
 
-    private val exampleDialog: EmaDialogProvider by instance(tag = DIALOG_TAG_SIMPLE)
+    private val navigateTotalGamesDialog: EmaDialogProvider by instance(tag = DIALOG_TAG_SIMPLE)
 
     override fun onNormal(data: GamesListState) {
         //Siempre que se realice cualquier accion de este fragmento, pasas por aqui
@@ -36,7 +36,7 @@ class GamesListFragment : BaseFragment<GamesListState, GamesListViewModel, Games
         }
 
         loadingDialog.hide()
-        exampleDialog.hide()
+        navigateTotalGamesDialog.hide()
     }
 
     override fun onAlternative(data: EmaExtraData) {
@@ -71,23 +71,24 @@ class GamesListFragment : BaseFragment<GamesListState, GamesListViewModel, Games
             srlGamesList.isRefreshing = false
         }
 
-        btnGameListExampleDialog.setOnClickListener {
-            exampleDialog.show(SimpleDialogData(
-                    title = getString(R.string.example_game_list_dialog_title),
-                    accept = getString(R.string.example_game_list_dialog_accept),
-                    cancel = getString(R.string.example_game_list_dialog_cancel)))
+        btnGameListSimpleDialogToTotalGames.setOnClickListener {
+            navigateTotalGamesDialog.show(SimpleDialogData(
+                    title = getString(R.string.simple_game_list_dialog_title),
+                    accept = getString(R.string.simple_game_list_dialog_accept),
+                    cancel = getString(R.string.simple_game_list_dialog_cancel)))
 
-            exampleDialog.dialogListener = object : SimpleDialogListener {
+            navigateTotalGamesDialog.dialogListener = object : SimpleDialogListener {
                 override fun onCancelClicked() {
-                    viewModel.onCancelExampleDialog()
+                    viewModel.onCancelDialogToTotalGames()
                 }
 
                 override fun onConfirmClicked() {
-                    viewModel.onConfirmExampleDialog()
+                    viewModel.onConfirmDialogToTotalGames("56456")
+                    navigateTotalGamesDialog.hide()
                 }
 
                 override fun onBackPressed() {
-                    viewModel.onCancelExampleDialog()
+                    viewModel.onCancelDialogToTotalGames()
                 }
             }
         }
