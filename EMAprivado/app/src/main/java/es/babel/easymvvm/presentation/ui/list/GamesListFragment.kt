@@ -54,7 +54,7 @@ class GamesListFragment : BaseFragment<GamesListState, GamesListViewModel, Games
                     }
 
                     override fun onConfirmClicked() {
-                        viewModel.onConfirmDialogToTotalGames("56456")
+                        viewModel.onConfirmDialogToTotalGames()
                     }
 
                     override fun onBackPressed() {
