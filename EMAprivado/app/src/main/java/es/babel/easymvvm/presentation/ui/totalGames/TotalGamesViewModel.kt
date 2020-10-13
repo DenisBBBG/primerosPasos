@@ -37,7 +37,11 @@ class TotalGamesViewModel(private val getTotalGamesUseCase: GetTotalGamesUseCase
 
     fun onTotalGamesDialogShow() {
         checkDataState {
+<<<<<<< Updated upstream
+            updateToAlternativeState(EmaExtraData(TOTAL_GAMES_DIALOG, it.totalGames))
+=======
             updateToAlternativeState(EmaExtraData(TOTAL_GAMES_DIALOG,it.totalGames))
+>>>>>>> Stashed changes
         }
     }
 }

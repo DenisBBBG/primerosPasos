@@ -9,6 +9,7 @@ import es.babel.easymvvm.presentation.DIALOG_TAG_TOTAL_GAMES
 import es.babel.easymvvm.presentation.dialog.loading.LoadingDialogProvider
 import es.babel.easymvvm.presentation.dialog.simple.SimpleDialogProvider
 import es.babel.easymvvm.presentation.dialog.totalGames.TotalGamesDialogProvider
+import es.babel.easymvvm.presentation.ui.MainActivityViewModel
 import es.babel.easymvvm.presentation.ui.data.GameDataViewModel
 import es.babel.easymvvm.presentation.ui.list.GamesListViewModel
 import es.babel.easymvvm.presentation.ui.totalGames.TotalGamesViewModel
@@ -45,4 +46,9 @@ fun fragmentInjection(fragment: Fragment) = Kodein.Module(name = "FragmentModule
     bind<GameDataViewModel>() with singleton { GameDataViewModel() }
 
     bind<TotalGamesViewModel>() with singleton { TotalGamesViewModel(instance()) }
+<<<<<<< Updated upstream
+
+    bind<MainActivityViewModel>() with singleton { MainActivityViewModel() }
+=======
+>>>>>>> Stashed changes
 }

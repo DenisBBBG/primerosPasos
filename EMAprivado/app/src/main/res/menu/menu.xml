@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/page_home"
+        android:enabled="true"
+        android:icon="@drawable/ic_home_bottom_menu_bar"
+        android:title="@string/menu_page_home_title" />
+    <item
+        android:id="@+id/page_total_games"
+        android:enabled="true"
+        android:icon="@drawable/ic_total_games_bottom_menu_bar"
+        android:title="@string/menu_page_total_games_title" />
+</menu>

@@ -18,18 +18,6 @@ class GamesListViewModel(private val getGamesUseCase: GetGamesUseCase) : BaseVie
 
     override fun onStartFirstTime(statePreloaded: Boolean) {
         refreshGameList()
-
-/*Llamar al servicio
-Actualiza datos sin llamar a la vista, es decir que los cambios no se verian en pantalla
-updateDataState {
-     }
-
-Actualiza los datos igual que la funcion anterior pero tambien actualiza la vista
-updateToNormalState {
-    copy(/aqui se ponen variables que queremos actualizar/)
-    actualizar variable del estado con lo que me evuelve el servicio
-}
- */
     }
 
     fun onGameItemClick(game: GameModel) {
@@ -86,3 +74,16 @@ updateToNormalState {
 
     }
 }
+
+/* onStartFirstTime
+Llamar al servicio
+Actualiza datos sin llamar a la vista, es decir que los cambios no se verian en pantalla
+updateDataState {
+     }
+
+Actualiza los datos igual que la funcion anterior pero tambien actualiza la vista
+updateToNormalState {
+    copy(/aqui se ponen variables que queremos actualizar/)
+    actualizar variable del estado con lo que me evuelve el servicio
+}
+ */

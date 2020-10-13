@@ -1,4 +1,4 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
 
     <!--Games Data Fragment-->
     <string name="games_data_no_description" translatable="false">Sin descripción.</string>
@@ -17,4 +17,8 @@
     <string name="total_games_button_dialog" translatable="false">How many games are there?</string>
     <string name="total_games_dialog_title" translatable="false">Successful search!</string>
     <string name="total_games_dialog_message" translatable="false">In this moment the number of games in the API is:</string>
+
+    <!--Bottom menu bar-->
+    <string name="menu_page_home_title" translatable="false">Home</string>
+    <string name="menu_page_total_games_title" translatable="false">Total games</string>
 </resources>

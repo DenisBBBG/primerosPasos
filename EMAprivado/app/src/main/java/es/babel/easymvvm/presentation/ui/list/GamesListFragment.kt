@@ -2,7 +2,10 @@ package es.babel.easymvvm.presentation.ui.list
 
 import android.text.Editable
 import android.text.TextWatcher
+import android.widget.Toast
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import es.babel.domain.model.GameModel
 import es.babel.easymvvm.R
 import es.babel.easymvvm.core.dialog.EmaDialogProvider
@@ -13,6 +16,7 @@ import es.babel.easymvvm.presentation.base.BaseFragment
 import es.babel.easymvvm.presentation.dialog.loading.LoadingDialogData
 import es.babel.easymvvm.presentation.dialog.simple.SimpleDialogData
 import es.babel.easymvvm.presentation.dialog.simple.SimpleDialogListener
+import es.babel.easymvvm.presentation.ui.MainActivityNavigator
 import es.babel.easymvvm.presentation.ui.list.GamesListViewModel.Companion.SIMPLE_DIALOG
 import kotlinx.android.synthetic.main.fragment_games_list.*
 import org.kodein.di.generic.instance

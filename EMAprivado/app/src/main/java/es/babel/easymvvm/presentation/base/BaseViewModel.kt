@@ -12,9 +12,17 @@ import es.babel.easymvvm.core.navigator.EmaNavigationState
  * @author <a href=“mailto:apps.carmabs@gmail.com”>Carlos Mateo</a>
  */
 
-abstract class BaseViewModel<S, NS : EmaNavigationState> : EmaViewModel<S, NS>(){
-
+abstract class BaseViewModel<T, NS : EmaNavigationState> : EmaViewModel<T, NS>() {
     override fun onResume(firstTime: Boolean) {
-        //Override if you need to make some operations when view goes to foreground
+    }
+
+    override fun onStartFirstTime(statePreloaded: Boolean) {
+    }
+
+    override fun onCleared() {
+        try {
+            super.onCleared()
+        } catch (e: Exception) {
+        }
     }
 }

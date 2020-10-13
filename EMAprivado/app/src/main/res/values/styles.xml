@@ -33,6 +33,7 @@
         <item name="android:gravity">center</item>
         <item name="android:textColor">@color/black</item>
     </style>
+
     <style name="GameSearch">
         <item name="android:textColor">@color/white</item>
         <item name="android:textColorHint">@color/colorPrimary</item>
@@ -42,7 +43,6 @@
     <style name="GamesItemTitle" parent="GamesTitle">
         <item name="android:textSize">@dimen/games_item_title_text_size</item>
     </style>
-
 
 
     <!-- Games data styles. -->
@@ -56,4 +56,6 @@
         <item name="android:background">@color/game_data_text_background</item>
         <item name="android:textSize">@dimen/games_data_text_text_size</item>
     </style>
+
+
 </resources>

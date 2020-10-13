@@ -14,7 +14,7 @@ import org.kodein.di.Kodein
  *
  * Created by: Carlos Mateo Benito on 21/1/19.
  */
-class EmaSampleApplication : EmaApplication() {
+class GamesApplication : EmaApplication() {
     override fun injectAppModule(kodein: Kodein.MainBuilder): Kodein.Module? {
         kodein.import(appDataInjection())
         return appInjection(this)
