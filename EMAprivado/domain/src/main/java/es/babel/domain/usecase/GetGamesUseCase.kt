@@ -12,7 +12,6 @@ import es.babel.easymvvm.core.usecase.EmaUseCase
  */
 
 class GetGamesUseCase(private val repository: Repository) : EmaUseCase<Unit, GameModelList>() {
-
     override suspend fun useCaseFunction(input: Unit): GameModelList {
         return repository.getGames()
     }

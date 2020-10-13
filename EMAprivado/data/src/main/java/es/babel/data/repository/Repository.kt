@@ -5,6 +5,7 @@ import es.babel.data.net.Api
 import es.babel.data.net.ServiceBuilder
 import es.babel.domain.model.CoverListModel
 import es.babel.domain.model.GameModel
+import es.babel.domain.model.TotalGamesDataModel
 import es.babel.domain.repository.Repository
 
 /**
@@ -41,5 +42,9 @@ class Repository : Repository {
 
     override suspend fun getURLCover(id: Long): CoverListModel {
         return api.getURLCover(id).toDomainModel()
+    }
+
+    override suspend fun getTotalGames(): TotalGamesDataModel {
+        return api.getTotalGames().toDomainModel()
     }
 }

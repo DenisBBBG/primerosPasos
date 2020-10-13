@@ -2,6 +2,7 @@ package es.babel.domain.repository
 
 import es.babel.domain.model.CoverListModel
 import es.babel.domain.model.GameModelList
+import es.babel.domain.model.TotalGamesDataModel
 
 /**
  *  *<p>
@@ -17,4 +18,6 @@ interface Repository {
     suspend fun getGames(): GameModelList
 
     suspend fun getURLCover(id: Long): CoverListModel
+
+    suspend fun getTotalGames(): TotalGamesDataModel
 }

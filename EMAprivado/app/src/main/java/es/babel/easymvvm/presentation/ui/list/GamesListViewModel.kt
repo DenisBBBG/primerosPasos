@@ -12,7 +12,7 @@ class GamesListViewModel(private val getGamesUseCase: GetGamesUseCase) : BaseVie
 
     private lateinit var fullGameList: List<GameModel>
 
-    companion object{
+    companion object {
         const val SIMPLE_DIALOG = 1
     }
 
@@ -72,16 +72,16 @@ updateToNormalState {
         updateToNormalState()
     }
 
-    fun onConfirmDialogToTotalGames(totalGames: String) {
+    fun onConfirmDialogToTotalGames() {
         updateToNormalState()
         navigate(
                 GamesListNavigator.Navigation.TotalGames(
-                        TotalGamesState(totalGames)
+                        TotalGamesState()
                 )
         )
     }
 
-    fun onSimpleDialogShow(){
+    fun onSimpleDialogShow() {
         updateToAlternativeState(EmaExtraData(SIMPLE_DIALOG))
 
     }
